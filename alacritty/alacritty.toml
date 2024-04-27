@@ -1,0 +1,39 @@
+[colors.cursor]
+cursor = "CellForeground"
+text = "CellBackground"
+
+[colors.primary]
+background = "#000000"
+foreground = "#ffffff"
+
+[cursor.style]
+blinking = "Off"
+shape = "Beam"
+
+[env]
+TERM = "alacritty"
+
+[font]
+size = 11.0
+
+[font.bold]
+family = "JetBrains Mono"
+
+[font.bold_italic]
+family = "JetBrains Mono"
+
+[font.italic]
+family = "JetBrains Mono"
+
+[font.normal]
+family = "JetBrains Mono"
+
+[scrolling]
+history = 10000
+
+[window]
+opacity = 0.7
+
+[window.padding]
+x = 5
+y = 5
