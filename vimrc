@@ -9,7 +9,7 @@ set foldcolumn=2
 set mouse=a
 set encoding=utf8
 set guifont=JetBrains\ Mono\ Nerd\ Font\ 11
-colorscheme molokai
+colorscheme tokyonight
 
 set colorcolumn=110
 highlight ColorColumn ctermbg=darkgray
@@ -30,7 +30,8 @@ call plug#begin()
   Plug 'Eliot00/git-lens.vim'
 call plug#end()
 
-nnoremap <C-w> :NERDTreeFocus<CR>
+nnoremap <C-a> :NERDTreeFocus<CR>
+inoremap <C-a> <Esc>:NERDTreeFocus<CR>
 nnoremap <C-e> :NERDTree<CR>
 nnoremap <C-q> :NERDTreeToggle<CR>
 nnoremap <C-g> :NERDTreeRefresh<CR>

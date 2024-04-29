@@ -12,21 +12,27 @@ umount ${disk}*
 wipefs -af $disk
 
 printf "g\nn\n1\n2048\n$((($efi_part_size+1)*2048))\nn\n2\n$(((($efi_part_size+1)*2048)+2048))\n$(((($efi_part_size+1)*2048)+4096))\nn\n3\n$(((($efi_part_size+1)*2048)+6144))\n$((((($efi_part_size+1)*2048)+6144)+($swap_size*2048)))\nn\n4\n\n\nt\n1\nEFI System\nt\n2\nBIOS boot\nt\n3\nLinux swap\nt\n4\nLinux filesystem\nw\n" | fdisk $disk
+# ------------------------------------------------
 
+# --------------- formatting partitions -----------
 mkfs.vfat -F 32 ${disk}1
 mkswap ${disk}3
 mkfs.ext4 ${disk}4
 # -------------------------------------------------
 
+# ----------- mounting partitions -----------------
 mount ${disk}4 /mnt
 mkdir -p /mnt/boot/EFI
 mount ${disk}1 /mnt/boot/EFI
+# -------------------------------------------------
 
+# ------------ installing the system --------------
 pacstrap /mnt base linux linux-firmware vim
-
-genfstab -U /mnt > /mnt/etc/fstab
+# -------------------------------------------------
 
 # ---------------- system configuration --------------------
+# fstab
+genfstab -U /mnt > /mnt/etc/fstab
 # timezone
 arch-chroot /mnt bash -c 'ln -svf /usr/share/zoneinfo/Asia/Novosibirsk /etc/localtime'
 # system clock
@@ -49,7 +55,6 @@ arch-chroot /mnt /usr/bin/env -i grubdisk=$disk bash -c 'pacman -S grub efibootm
 arch-chroot /mnt bash -c 'pacman -S netctl dhcpcd networkmanager network-manager-applet;systemctl enable NetworkManager'
 # for iphone
 arch-chroot /mnt bash -c 'pacman -S libimobiledevice usbmuxd'
-
 # ----------------------------------------------------------
 
 #umount -R /mnt
