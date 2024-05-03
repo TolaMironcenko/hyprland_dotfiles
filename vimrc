@@ -28,6 +28,8 @@ call plug#begin()
   Plug 'ghifarit53/tokyonight-vim'
   Plug 'valloric/youcompleteme'
   Plug 'Eliot00/git-lens.vim'
+  Plug 'pangloss/vim-javascript'
+  Plug 'mxw/vim-jsx'
 call plug#end()
 
 nnoremap <C-a> :NERDTreeFocus<CR>
