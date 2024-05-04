@@ -27,7 +27,20 @@ fi
 
 # -------------------- installing deps ----------------------------
 printf "$GREEN installing deps... (vim, rofi-wayland, hyprland, waybar, ly, mako, neofetch, ranger, kitty, alacritty, hyprpaper rofimoji)\n$RESET"
-sudo pacman -S vim rofi-wayland rofimoji hyprland hyprpaper waybar ly mako neofetch ranger kitty alacritty
+sudo pacman -S \
+    vim \
+    rofi-wayland \
+    rofimoji \
+    hyprland \
+    hyprpaper \
+    waybar \
+    ly \
+    mako \
+    neofetch \
+    ranger \
+    kitty \
+    alacritty \
+    playerctl
 if [ $? ]; then 
     printf "$GREEN installing deps success $RESET[$GREEN ok $RESET]\n"
 else
