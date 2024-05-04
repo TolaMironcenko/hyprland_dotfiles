@@ -123,3 +123,13 @@ else
     printf "[$YELLOW warn $RESET]\n$YELLOW backup your configuration, delete the folder and try again$RESET\n"
 fi
 # -------------------------------------------------------------
+
+# -------------------- ~/.config/rofimoji.rc ------------------------------
+printf "$GREEN installing rofimoji configuration...$RESET"
+if [ ! -f ~/.config/rofimoji.rc ]; then
+    ln -sv ~/dotfiles/rofi/emoji/rofimoji.rc ~/.config/rofimoji.rc &> /dev/null
+    printf "[$GREEN ok $RESET]\n"
+else
+    printf "[$YELLOW warn $RESET]\n$YELLOW backup your configuration, delete the folder and try again$RESET\n"
+fi
+# -------------------------------------------------------------
