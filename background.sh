@@ -1,4 +1,4 @@
-#!/bin/sh
+#!/usr/bin/env sh
 directory=~/Pictures/hyprpaper/images
 monitors=`hyprctl monitors | grep Monitor | awk '{print $2}'`
 

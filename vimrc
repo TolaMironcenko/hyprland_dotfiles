@@ -30,6 +30,7 @@ call plug#begin()
   Plug 'Eliot00/git-lens.vim'
   Plug 'pangloss/vim-javascript'
   Plug 'mxw/vim-jsx'
+  Plug 'theRealCarneiro/hyprland-vim-syntax'
 call plug#end()
 
 nnoremap <C-a> :NERDTreeFocus<CR>
