@@ -60,7 +60,7 @@ fi
 # --------------- ~/.config/greenclip.toml ------------------
 printf "$GREEN installing greenclip configuration...$RESET"
 if [ ! -f ~/.config/greenclip.toml ]; then
-    ln -sv ~/dotfiles/greenclip.toml ~/.config/greenclip.toml &> /dev/null
+    ln -sv ~/dotfiles/greenclip/greenclip.toml ~/.config/greenclip.toml &> /dev/null
     printf "[$GREEN ok $RESET]\n"
 else
     printf "[$YELLOW warn $RESET]\n$YELLOW backup your configuration, delete the folder and try again$RESET\n"
@@ -91,6 +91,16 @@ fi
 printf "$GREEN installing neofetch configuration...$RESET"
 if [ ! -d ~/.config/neofetch ]; then
     ln -sv ~/dotfiles/neofetch ~/.config/neofetch &> /dev/null
+    printf "[$GREEN ok $RESET]\n"
+else
+    printf "[$YELLOW warn $RESET]\n$YELLOW backup your configuration, delete the folder and try again$RESET\n"
+fi
+# -------------------------------------------------------------
+
+# -------------------- ~/.config/ranger ------------------------------
+printf "$GREEN installing ranger configuration...$RESET"
+if [ ! -d ~/.config/ranger ]; then
+    ln -sv ~/dotfiles/ranger ~/.config/ranger &> /dev/null
     printf "[$GREEN ok $RESET]\n"
 else
     printf "[$YELLOW warn $RESET]\n$YELLOW backup your configuration, delete the folder and try again$RESET\n"
