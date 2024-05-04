@@ -7,6 +7,13 @@ YELLOW='\033[0;33m'
 RED='\033[0;31m'
 # ----------------
 
+# ---------------- cheking system ---------------------------
+if [[ $(uname) != "Linux" ]]; then
+    printf "$RED This is working only on Linux systems (only Arch Linux)\n$RESET"
+    exit 1
+fi
+# ----------------------------------------------------------
+
 # -------------- ~/.config/hypr ----------------------------
 printf "$GREEN installing hyprland configuration...$RESET"
 if [ ! -d ~/.config/hypr ]; then
