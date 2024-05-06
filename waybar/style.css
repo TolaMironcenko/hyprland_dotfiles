@@ -6,7 +6,7 @@
 }
 
 window#waybar {
-    background-color: #000000;
+    background-color: transparent; /*#000000;*/
     opacity: 0.6;
     color: #ffffff;
     transition-property: background-color;
@@ -95,14 +95,20 @@ button {
 #scratchpad,
 #custom-power,
 #custom-launcher,
-#mpd {
+#mpd,
+#language,
+#keyboard-state {
     padding: 0 10px;
     color: #ffffff;
+    background-color: #64727D;
+    border-radius: 25px;
 }
 
-#window,
-#workspaces {
+#window {
     margin: 0 4px;
+    background-color: #64727D;
+    border-radius: 25px;
+    padding:  0 10px;
 }
 
 /* If workspaces is the leftmost module, omit left margin */
