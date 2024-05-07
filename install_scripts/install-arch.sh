@@ -42,6 +42,7 @@ mkfs.ext4 ${disk}4
 mount ${disk}4 /mnt
 mkdir -p /mnt/boot/EFI
 mount ${disk}1 /mnt/boot/EFI
+swapon ${disk}3
 # -------------------------------------------------
 
 # ------------ installing the system --------------
