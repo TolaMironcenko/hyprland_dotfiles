@@ -2,17 +2,17 @@
 
 ## To install all configs you need to create backup your configurations and start
 ```bash
-./install.sh
+./install_scripts/install.sh
 ```
 ### or
 ```bash
-~/dotfiles/install.sh
+~/dotfiles/install_scripts/install.sh
 ```
 ## Full install commands
 ```bash
 cd ~/
 git clone https://github.com/TolaMironcenko/hyprland_dotfiles.git dotfiles
-cd ~/dotfiles
+cd ~/dotfiles/install_scripts
 ./install.sh
 ```
 
@@ -33,3 +33,9 @@ cd ~/dotfiles
 | mainMod + shift + x | open new note in xpad |
 | mainMod + a | open telegram-desktop |
 | mainMod + g | open google-chrome-stable |
+
+## To install system (Arch Linux) you can change file install_scripts/install-arch.sh
+### and start
+```bash
+./install-arch.sh
+```
