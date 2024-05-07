@@ -22,17 +22,17 @@ while true; do
         traffic_color=$RED
     fi
 
-    if [[ $bytes == 'kb' ]] || [[ $bytes == 'Kb' ]]; then
+    if [[ $bytes == 'k' ]] || [[ $bytes == 'K' ]]; then
         printf "$BLUE tx traffic$RESET = $(($tx_traffic/1024)) Kb\n"
         printf "$traffic_color rx traffic$RESET = $(($rx_traffic/1024)) Kb\n"
     fi
 
-    if [[ $bytes == 'mb' ]] || [[ $bytes == 'Mb' ]]; then
+    if [[ $bytes == 'm' ]] || [[ $bytes == 'M' ]]; then
         printf "$BLUE tx traffic$RESET = $(($tx_traffic/1024/1024)) Mb\n"
         printf "$traffic_color rx traffic$RESET = $(($rx_traffic/1024/1024)) Mb\n"
     fi
     
-    if [[ $bytes == 'gb' ]] || [[ $bytes == 'Gb' ]]; then
+    if [[ $bytes == 'g' ]] || [[ $bytes == 'G' ]]; then
         if [[ $(echo $(($tx_traffic/1024/1024/1024))) == 0 ]]; then
             printf "$BLUE tx traffic$RESET = $(($tx_traffic/1024/1024)) Mb\n"
         else
