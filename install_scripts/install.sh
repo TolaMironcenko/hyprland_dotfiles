@@ -133,3 +133,15 @@ else
     printf "[$YELLOW warn $RESET]\n$YELLOW backup your configuration, delete the folder and try again$RESET\n"
 fi
 # -------------------------------------------------------------
+
+# -------------------- ~/.config/fastfetch ------------------------------
+printf "$GREEN installing fastfetch configuration...$RESET"
+if [ ! -d ~/.config/fastfetch ]; then
+    ln -sv ~/dotfiles/fastfetch ~/.config/fastfetch &> /dev/null
+    printf "[$GREEN ok $RESET]\n"
+else
+    printf "[$YELLOW warn $RESET]\n$YELLOW backup your configuration, delete the folder and try again$RESET\n"
+fi
+# -------------------------------------------------------------
+
+
