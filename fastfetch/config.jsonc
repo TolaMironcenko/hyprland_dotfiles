@@ -44,6 +44,11 @@
         "keyColor": "bright_blue"
     },
     {
+        "type": "processes",
+        "key": "├▶ ",
+        "keyColor": "bright_blue"
+    },
+    {
         "type": "custom",
         "format": "└─────────────────────────────┘"
     },
@@ -98,6 +103,21 @@
         "keyColor": "green"
     },
     {
+        "type": "vulkan",
+        "key": "",
+        "keyColor": "green"
+    },
+    {
+        "type": "opengl",
+        "key": "",
+        "keyColor": "green"
+    },
+    {
+        "type": "opencl",
+        "key": "",
+        "keyColor": "green"
+    },
+    {
         "type": "custom",
         "format": "└───────────────────────────────┘"
     },
@@ -126,8 +146,23 @@
         "keyColor": "red"
     },
     {
+        "type": "chassis",
+        "key": "├▶ ",
+        "keyColor": "red"
+    },
+    {
+        "type": "board",
+        "key": "├▶ ",
+        "keyColor": "red"
+    },
+    {
         "type": "disk",
         "key": "├▶  (/)",
+        "keyColor": "red"
+    },
+    {
+        "type": "bios",
+        "key": "",
         "keyColor": "red"
     },
     {
@@ -140,6 +175,11 @@
     },
     {
         "type": "localip",
+        "key": "├▶  ",
+        "keyColor": "yellow"
+    },
+    {
+        "type": "publicip",
         "key": "├▶  ",
         "keyColor": "yellow"
     },
@@ -161,6 +201,39 @@
     {
         "type": "custom",
         "format": "└────────────────────────────────┘"
+    },
+    {
+        "type": "weather",
+        "key": "├▶ ",
+        "keyColor": "white"
+    },
+    {
+        "type": "player",
+        "key": "",
+        "keyColor": "blue"
+    },
+    {
+        "type": "custom",
+        "format": "┌─────────── IO ──────────────┐"
+    },
+    {
+        "type": "netio",
+        "key": "",
+        "keyColor": "blue"
+    },
+    {
+        "type": "diskio",
+        "key": "",
+        "keyColor": "bright_yellow"
+    },
+    {
+        "type": "custom",
+        "format": "└─────────────────────────────┘"
+    },
+    {
+        "type": "users",
+        "key": "├▶ ",
+        "keyColor": "white"
     },
     "break",
     "colors"
