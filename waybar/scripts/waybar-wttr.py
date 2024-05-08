@@ -91,17 +91,17 @@ def format_chances(hour):
 data['text'] = WEATHER_CODES[weather['current_condition'][0]['weatherCode']] + \
     " "+weather['current_condition'][0]['FeelsLikeC']+"°"
 
-data['tooltip'] = f"&lt;b&gt;{weather['current_condition'][0]['weatherDesc'][0]['value']} {weather['current_condition'][0]['temp_C']}°&lt;/b&gt;\n"
+data['tooltip'] = f"<b>{weather['current_condition'][0]['weatherDesc'][0]['value']} {weather['current_condition'][0]['temp_C']}°</b>\n"
 data['tooltip'] += f"Feels like: {weather['current_condition'][0]['FeelsLikeC']}°\n"
 data['tooltip'] += f"Wind: {weather['current_condition'][0]['windspeedKmph']}Km/h\n"
 data['tooltip'] += f"Humidity: {weather['current_condition'][0]['humidity']}%\n"
 for i, day in enumerate(weather['weather']):
-    data['tooltip'] += f"\n&lt;b&gt;"
+    data['tooltip'] += f"\n<b>"
     if i == 0:
         data['tooltip'] += "Today, "
     if i == 1:
         data['tooltip'] += "Tomorrow, "
-    data['tooltip'] += f"{day['date']}&lt;/b&gt;\n"
+    data['tooltip'] += f"{day['date']}</b>\n"
     data['tooltip'] += f"⬆️ {day['maxtempC']}° ⬇️ {day['mintempC']}° "
     data['tooltip'] += f"🌅 {day['astronomy'][0]['sunrise']} 🌇 {day['astronomy'][0]['sunset']}\n"
     for hour in day['hourly']:
