@@ -2,7 +2,7 @@
     "layer": "top",
     "height": 30,
     "spacing": 4,
-    "modules-left": ["custom/launcher", "cpu", "memory", "temperature", "disk", "custom/weather", "hyprland/window"],
+    "modules-left": ["custom/launcher", "cpu", "memory", "temperature", "disk", "custom/weather", "custom/updates", "hyprland/window"],
     "modules-center": ["hyprland/workspaces"],
     "modules-right": ["custom/spotify", "pulseaudio", "network", "backlight", "keyboard-state", "hyprland/language", "battery", "battery#bat2", "clock", "tray", "custom/power"],
     "hyprland/workspaces": {
@@ -113,5 +113,23 @@
         "exec": "~/dotfiles/waybar/scripts/waybar-wttr.py",
         "return-type": "json"
     },
+    "custom/pacman": {
+        "format": "{}  ",
+        "interval": 3600,                     // every hour
+        "exec": "checkupdates | wc -l",       // # of updates
+        "exec-if": "exit 0",                  // always run; consider advanced run conditions
+        "on-click": "termite -e 'sudo pacman -Syu'; pkill -SIGRTMIN+8 waybar", // update system
+        "signal": 8
+    },
+   "custom/updates": {
+       "format": "{} {icon}",
+       "return-type": "json",
+       "format-icons": {
+           "has-updates": "󱍷",
+           "updated": "󰂪"
+       },
+       "exec-if": "which waybar-module-pacman-updates",
+       "exec": "waybar-module-pacman-updates  --interval-seconds 5 --network-interval-seconds 300"
+   },
 }
 

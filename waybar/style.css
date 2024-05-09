@@ -97,7 +97,10 @@ button {
 #custom-launcher,
 #mpd,
 #language,
-#keyboard-state {
+#keyboard-state,
+#custom-updatees,
+#custom-weather
+{
     padding: 0 10px;
     color: #ffffff;
     /*background-color: #64727D;*/
@@ -334,3 +337,8 @@ label:focus {
     margin: 0 1px;
     background-color: black;
 }
+
+#custom-updates {
+    padding: 2px 12px;
+}
+
