@@ -65,7 +65,7 @@ fi
 
 # ---------------------- installing deps from AUR ------------------------
 printf "$GREEN installing deps from AUR... (rofi-greenclip, hyprlock)\n$RESET"
-paru -S rofi-greenclip hyprlock
+paru -S rofi-greenclip hyprlock waybar-module-pacman-updates-git
 if [ $? ]; then 
     printf "$GREEN installing deps from AUR success $RESET[$GREEN ok $RESET]\n"
 else
