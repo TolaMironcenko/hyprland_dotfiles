@@ -20,13 +20,13 @@ configuration {
     message-margin:              0px 350px;
     message-padding:             12px;
     message-border-radius:       100%;
-    listview-spacing:            25px;
-    element-padding:             35px 30px;
+    listview-spacing:            10px;
+    element-padding:             10px 10px;
     element-border-radius:       100%;
 
-    prompt-font:                 "Iosevka Nerd Font Bold 48";
+    prompt-font:                 "Iosevka Nerd Font Bold 18";
     textbox-font:                "Iosevka Nerd Font 12";
-    element-text-font:           "feather 48";
+    element-text-font:           "feather 38";
 
     background-window:           black/60%;
     background-normal:           white/5%;
@@ -56,7 +56,7 @@ mainbox {
 
 /*****----- User -----*****/
 userimage {
-    margin:                      0px 400px;
+    margin:                      0px 250px;
     border:                      2px;
     border-radius:               100%;
     border-color:                white;
