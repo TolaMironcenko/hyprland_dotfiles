@@ -198,11 +198,12 @@
 		    //"default": "▶",
 		    "mpv": "🎵",
             "chromium": "",
-            "firefox": ""
+            "firefox": "",
+            "TelegramDesktop": ""
 	    },
 	    "status-icons": {
-            "playing": "⏸",
-		    "paused": "▶"
+            "playing": "",
+		    "paused": ""
 	    },
 	    // "ignored-players": ["firefox"]
     }

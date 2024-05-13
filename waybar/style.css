@@ -369,3 +369,7 @@ label:focus {
     min-height: 100px;
 }
 
+#mpris {
+    padding: 10px 12px;
+}
+
