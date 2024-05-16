@@ -137,8 +137,8 @@
        "exec": "waybar-module-pacman-updates  --interval-seconds 5 --network-interval-seconds 300"
    },
    "custom/onscreenkeyboard": {
-        "format": "onscrkeyboard",
-        "exec": "~/dotfiles/toggle_keyboard.sh"
+        "format": " ",
+        "on-click": "~/dotfiles/toggle_keyboard.sh"
     },
    "bluetooth": {
         "format": " {status}",
