@@ -13,6 +13,7 @@ efi_part_size=200
 swap_size=1024
 hostname="arch"
 normal_user="tola"
+rootfstype="btrfs"
 # -------------------
 
 # -------------- cheking system -----------------
@@ -35,7 +36,8 @@ printf "g\nn\n1\n2048\n$((($efi_part_size+1)*2048))\nn\n2\n$(((($efi_part_size+1
 # --------------- formatting partitions -----------
 mkfs.vfat -F 32 ${disk}1
 mkswap ${disk}3
-mkfs.ext4 ${disk}4
+[ "$rootfstype" == "ext4" ] && mkfs.ext4 ${disk}4
+[ "$rootfstype" == "btrfs" ] && mkfs.btrfs -L arch -f ${disk}4
 # -------------------------------------------------
 
 # ----------- mounting partitions -----------------
