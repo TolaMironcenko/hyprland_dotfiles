@@ -12,6 +12,7 @@ interface=$1
 bytes=$2
 
 while true; do
+    clear
     tx_traffic=$(cat /sys/class/net/${interface}/statistics/tx_bytes)
     rx_traffic=$(cat /sys/class/net/${interface}/statistics/rx_bytes)
 
