@@ -8,9 +8,9 @@ RED='\033[0;31m'
 # ----------------
 
 # ----- variables ----
-disk="/dev/sde"
-efi_part_size=200
-swap_size=1024
+disk="/dev/sda"
+efi_part_size=500
+swap_size=8192
 hostname="arch"
 normal_user="tola"
 rootfstype="btrfs"
