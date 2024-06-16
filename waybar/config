@@ -115,7 +115,7 @@
         "format": "{}",
         "tooltip": true,
         "interval": 3600,
-        "exec": "~/dotfiles/waybar/scripts/waybar-wttr.py",
+        "exec": "wttrbar",
         "return-type": "json"
     },
     "custom/pacman": {
