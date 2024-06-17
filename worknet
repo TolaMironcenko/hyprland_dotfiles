@@ -1,0 +1,4 @@
+#!/bin/sh
+
+ip route del default via 172.17.132.1 dev enp3s0
+ip route add 172.17.0.0/24 via 172.17.132.1 dev enp3s0
