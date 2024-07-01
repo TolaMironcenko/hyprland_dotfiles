@@ -144,4 +144,12 @@ else
 fi
 # -------------------------------------------------------------
 
-
+# ------------------- ~/.config/picom -------------------------
+printf "$GREEN installing picom configuration...$RESET"
+if [ ! -d ~/.config/picom ]; then
+    ln -sv ~/dotfiles/picom ~/.config/picom &> /dev/null
+    printf "[$GREEN ok $RESET]\n"
+else
+    printf "[$YELLOW warn $RESET]\n$YELLOW backup your configuration, delete the folder and try again$RESET\n"
+fi
+# -------------------------------------------------------------
