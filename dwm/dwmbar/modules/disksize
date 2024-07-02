@@ -2,7 +2,7 @@
 
 # Prints out the total disk memory and the available memory
 
-PREFIX=' '
+PREFIX='  '
 
 get_disk()
 {
