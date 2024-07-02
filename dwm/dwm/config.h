@@ -64,6 +64,7 @@ static char dmenumon[2] = "0"; /* component of dmenucmd, manipulated in spawn() 
 static const char *dmenucmd[] = { "dmenu_run", "-m", dmenumon, "-fn", dmenufont, "-nb", col_gray1, "-nf", col_gray3, "-sb", col_cyan, "-sf", col_gray4, NULL };
 static const char *termcmd[]  = { "kitty", NULL };
 static const char *roficmd[] = { "/home/tola/dotfiles/rofi/launcher/launcher.sh", NULL };
+static const char *powermenucmd[] = { "/home/tola/dotfiles/rofi/powermenu/powermenu.sh", NULL };
 static const char *filemanagercmd[] = { "thunar", NULL };
 static const char *telegramcmd[] = { "telegram-desktop", NULL };
 static const char *googlecmd[] = { "google-chrome-stable", NULL };
@@ -71,6 +72,7 @@ static const char *googlecmd[] = { "google-chrome-stable", NULL };
 static const Key keys[] = {
 	/* modifier                     key        function        argument */
 	{ MODKEY,                       XK_p,      spawn,          {.v = roficmd } },
+    { MODKEY|ShiftMask,             XK_p,      spawn,           {.v = powermenucmd } },
 	{ MODKEY,                       XK_Return, spawn,          {.v = termcmd } },
     { MODKEY,                       XK_s,      spawn,          {.v = filemanagercmd } },
     { MODKEY,                       XK_a,      spawn,          {.v = telegramcmd } },
