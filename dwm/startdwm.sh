@@ -1,7 +1,7 @@
 #!/bin/sh
 
 setxkbmap "us,ru" -option 'grp:win_space_toggle'
-feh --bg-fill ~/Pictures/hyprpaper/images/beautiful-nature-landscape-with-mountains-lake.png
+~/dotfiles/dwm/background.sh &
 picom -b
 dwmbar &
 
