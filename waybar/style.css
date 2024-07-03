@@ -47,7 +47,11 @@ button {
     color: #ffffff;
     margin: 2px 2px;
     border-radius: 25px;
-    transition: 0.3s;
+    transition: 0.3s;    
+}
+
+#workspaces button label {
+    /* font-size: 20px; */
 }
 
 #workspaces button:hover {

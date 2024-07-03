@@ -1,4 +1,4 @@
-#!/usr/bin/env sh
+#!/bin/sh
 
 # ---- colors ----
 RESET='\033[0m'

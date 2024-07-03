@@ -1,4 +1,4 @@
-#!/usr/bin/env bash
+#!/bin/sh
 
 ## Author : Aditya Shakya (adi1090x)
 ## Github : @adi1090x
@@ -65,7 +65,7 @@ run_cmd() {
 			amixer set Master mute
 			systemctl suspend
 		elif [[ $1 == '--logout' ]]; then
-		   systemctl restart ly 
+		   	killall Hyprland
         fi
 	else
 		exit 0

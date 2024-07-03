@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/bin/sh
 # This file based in part on the mkinitramfs script for the LFS LiveCD
 # written by Alexander E. Patrakov and Jeremy Huntwork.
 
