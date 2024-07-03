@@ -1490,7 +1490,7 @@ setfullscreen(Client *c, int fullscreen)
 		c->oldbw = c->bw;
 		c->bw = 0;
 		c->isfloating = 1;
-		resizeclient(c, c->mon->mx, c->mon->my, c->mon->mw, c->mon->mh);
+		resizeclient(c, c->mon->mx+gap, c->mon->my+gap, c->mon->mw-gap-gap, c->mon->mh-gap-gap);
 		XRaiseWindow(dpy, c->win);
 	} else if (!fullscreen && c->isfullscreen){
 		XChangeProperty(dpy, c->win, netatom[NetWMState], XA_ATOM, 32,
@@ -1502,7 +1502,7 @@ setfullscreen(Client *c, int fullscreen)
 		c->y = c->oldy;
 		c->w = c->oldw;
 		c->h = c->oldh;
-		resizeclient(c, c->x, c->y, c->w, c->h);
+		resizeclient(c, c->x+gap, c->y+gap, c->w-gap-gap, c->h-gap-gap);
 		arrange(c->mon);
 	}
 }
