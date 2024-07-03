@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # What modules, in what order
-MODULES="weather volume disksize wifi internet cpuload ram cputemp date time"
+MODULES="weather battery volume disksize wifi internet cpuload ram cputemp date time"
 
 # Modules that require an active internet connection
 ONLINE_MODULES="weather internet"
