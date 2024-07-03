@@ -1,8 +1,8 @@
 /* See LICENSE file for copyright and license details. */
 
 /* appearance */
-static const unsigned int borderpx  = 5;        /* border pixel of windows */
-static const unsigned int gappx     = 5;        /* gap pixel between windows */
+static const unsigned int borderpx  = 2;        /* border pixel of windows */
+static const unsigned int gap     = 5;        /* gap pixel between windows */
 static const unsigned int snap      = 32;       /* snap pixel */
 static const int showbar            = 1;        /* 0 means no bar */
 static const int topbar             = 1;        /* 0 means bottom bar */
@@ -12,11 +12,12 @@ static const char col_gray1[]       = "#222222";
 static const char col_gray2[]       = "#444444";
 static const char col_gray3[]       = "#bbbbbb";
 static const char col_gray4[]       = "#eeeeee";
-static const char col_cyan[]        = "#000000";
+static const char col_cyan[]        = "#00ffff";
+static const char color_black[]     = "#000000";
 static const char *colors[][3]      = {
 	/*               fg         bg         border   */
 	[SchemeNorm] = { col_gray3, col_gray1, col_gray2 },
-	[SchemeSel]  = { col_gray4, col_cyan,  col_cyan  },
+	[SchemeSel]  = { col_gray4, color_black,  col_cyan  },
 };
 
 /* tagging */
@@ -70,9 +71,43 @@ static const char *rofimojicmd[] = { "/home/tola/dotfiles/rofi/emoji/rofimoji.sh
 static const char *filemanagercmd[] = { "thunar", NULL };
 static const char *telegramcmd[] = { "telegram-desktop", NULL };
 static const char *googlecmd[] = { "google-chrome-stable", NULL };
+static const char *lockercmd[] = { "i3lock", "-c", "000000", NULL };
+
+//---------------------------- pamixer ------------------------------
+static const char *pamixericmd[] = { "pamixer", "-i", "10", NULL };
+static const char *pamixerdcmd[] = { "pamixer", "-d", "10", NULL };
+static const char *pamixermutecmd[] = { "pamixer", "-t", NULL };
+//-------------------------------------------------------------------
+
+//----------------------------- brightness --------------------------
+static const char *brightnessupcmd[] = { "brightnessctl", "s", "10%+", NULL };
+static const char *brightnessdowncmd[] = { "brightnessctl", "s", "10%-", NULL };
+//-------------------------------------------------------------------
 
 static const Key keys[] = {
 	/* modifier                     key        function        argument */
+
+    //-------------- pamixer -----------------------------------------------------------
+    //                              XF86AudioRaiseVolume
+    { 0,                            0x1008ff13, spawn,         {.v = pamixericmd } },
+    //                              XF86AudioLowerVolume
+    { 0,                            0x1008ff11, spawn,         {.v = pamixerdcmd } },
+    //                              equal
+    { MODKEY,                       0x3d,      spawn,          {.v = pamixericmd } },
+    //                              minus
+    { MODKEY,                       0x2d,      spawn,          {.v = pamixerdcmd } },
+    { MODKEY|ShiftMask,             XK_m,      spawn,          {.v = pamixermutecmd } },
+    //----------------------------------------------------------------------------------
+
+    //---------------------------------- brightness ------------------------------------
+    //                              XF86MonBrightnessUp
+    { 0,                            0x1008ff02, spawn,         {.v = brightnessupcmd } },
+    //                              XF86MonBrightnessDown
+    { 0,                            0x1008ff03, spawn,         {.v = brightnessdowncmd } },
+    //----------------------------------------------------------------------------------
+
+    //--------------------------------- applications -----------------------------------
+    { MODKEY|ShiftMask,             XK_l,      spawn,          {.v = lockercmd } },
 	{ MODKEY,                       XK_p,      spawn,          {.v = roficmd } },
     { MODKEY|ShiftMask,             XK_p,      spawn,          {.v = powermenucmd } },
     { MODKEY,                       XK_c,      spawn,          {.v = clipboardcmd } },
@@ -81,6 +116,8 @@ static const Key keys[] = {
     { MODKEY,                       XK_s,      spawn,          {.v = filemanagercmd } },
     { MODKEY,                       XK_a,      spawn,          {.v = telegramcmd } },
     { MODKEY,                       XK_g,      spawn,          {.v = googlecmd } },
+    //----------------------------------------------------------------------------------
+
 	{ MODKEY,                       XK_b,      togglebar,      {0} },
 	{ MODKEY,                       XK_j,      focusstack,     {.i = +1 } },
 	{ MODKEY,                       XK_k,      focusstack,     {.i = -1 } },
@@ -88,16 +125,16 @@ static const Key keys[] = {
 	{ MODKEY,                       XK_d,      incnmaster,     {.i = -1 } },
 	{ MODKEY,                       XK_h,      setmfact,       {.f = -0.05} },
 	{ MODKEY,                       XK_l,      setmfact,       {.f = +0.05} },
-	// { MODKEY,                       XK_Return, zoom,           {0} },
+	{ MODKEY,                       XK_w,      zoom,           {0} },
 	{ MODKEY,                       XK_Tab,    view,           {0} },
-	{ MODKEY,             XK_q,      killclient,     {0} },
+	{ MODKEY,                       XK_q,      killclient,     {0} },
 	{ MODKEY,                       XK_t,      setlayout,      {.v = &layouts[0]} },
 	{ MODKEY,                       XK_f,      setlayout,      {.v = &layouts[1]} },
 	{ MODKEY,                       XK_m,      setlayout,      {.v = &layouts[2]} },
     { MODKEY,                       XK_r,      setlayout,      {.v = &layouts[3]} },
     { MODKEY|ShiftMask,             XK_r,      setlayout,      {.v = &layouts[4]} },
 	{ MODKEY,                       XK_space,  setlayout,      {0} },
-	{ MODKEY,                       XK_v,  togglefloating, {0} },
+	{ MODKEY,                       XK_v,  	   togglefloating, {0} },
 	{ MODKEY,                       XK_0,      view,           {.ui = ~0 } },
 	{ MODKEY|ShiftMask,             XK_0,      tag,            {.ui = ~0 } },
 	{ MODKEY,                       XK_comma,  focusmon,       {.i = -1 } },
