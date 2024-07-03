@@ -153,3 +153,14 @@ else
     printf "[$YELLOW warn $RESET]\n$YELLOW backup your configuration, delete the folder and try again$RESET\n"
 fi
 # -------------------------------------------------------------
+
+# ------------------- ~/.config/dunst -------------------------
+printf "$GREEN installing dunst configuration...$RESET"
+if [ ! -d ~/.config/dunst ]; then
+    ln -sv ~/dotfiles/dunst ~/.config/dunst &> /dev/null
+    printf "[$GREEN ok $RESET]\n"
+else
+    printf "[$YELLOW warn $RESET]\n$YELLOW backup your configuration, delete the folder and try again$RESET\n"
+fi
+# -------------------------------------------------------------
+
