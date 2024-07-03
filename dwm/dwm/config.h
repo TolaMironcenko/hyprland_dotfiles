@@ -79,6 +79,11 @@ static const char *pamixerdcmd[] = { "pamixer", "-d", "10", NULL };
 static const char *pamixermutecmd[] = { "pamixer", "-t", NULL };
 //-------------------------------------------------------------------
 
+//----------------------------- brightness --------------------------
+static const char *brightnessupcmd[] = { "brightnessctl", "s", "10%+", NULL };
+static const char *brightnessdowncmd[] = { "brightnessctl", "s", "10%-", NULL };
+//-------------------------------------------------------------------
+
 static const Key keys[] = {
 	/* modifier                     key        function        argument */
 
@@ -87,7 +92,18 @@ static const Key keys[] = {
     { 0,                            0x1008ff13, spawn,         {.v = pamixericmd } },
     //                              XF86AudioLowerVolume
     { 0,                            0x1008ff11, spawn,         {.v = pamixerdcmd } },
+    //                              equal
+    { MODKEY,                       0x3d,      spawn,          {.v = pamixericmd } },
+    //                              minus
+    { MODKEY,                       0x2d,      spawn,          {.v = pamixerdcmd } },
     { MODKEY|ShiftMask,             XK_m,      spawn,          {.v = pamixermutecmd } },
+    //----------------------------------------------------------------------------------
+
+    //---------------------------------- brightness ------------------------------------
+    //                              XF86MonBrightnessUp
+    { 0,                            0x1008ff02, spawn,         {.v = brightnessupcmd } },
+    //                              XF86MonBrightnessDown
+    { 0,                            0x1008ff03, spawn,         {.v = brightnessdowncmd } },
     //----------------------------------------------------------------------------------
 
     //--------------------------------- applications -----------------------------------
