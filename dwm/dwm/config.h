@@ -71,9 +71,27 @@ static const char *rofimojicmd[] = { "/home/tola/dotfiles/rofi/emoji/rofimoji.sh
 static const char *filemanagercmd[] = { "thunar", NULL };
 static const char *telegramcmd[] = { "telegram-desktop", NULL };
 static const char *googlecmd[] = { "google-chrome-stable", NULL };
+static const char *lockercmd[] = { "i3lock", "-c", "000000", NULL };
+
+//---------------------------- pamixer ------------------------------
+static const char *pamixericmd[] = { "pamixer", "-i", "10", NULL };
+static const char *pamixerdcmd[] = { "pamixer", "-d", "10", NULL };
+static const char *pamixermutecmd[] = { "pamixer", "-t", NULL };
+//-------------------------------------------------------------------
 
 static const Key keys[] = {
 	/* modifier                     key        function        argument */
+
+    //-------------- pamixer -----------------------------------------------------------
+    //                              XF86AudioRaiseVolume
+    { 0,                            0x1008ff13, spawn,         {.v = pamixericmd } },
+    //                              XF86AudioLowerVolume
+    { 0,                            0x1008ff11, spawn,         {.v = pamixerdcmd } },
+    { MODKEY|ShiftMask,             XK_m,      spawn,          {.v = pamixermutecmd } },
+    //----------------------------------------------------------------------------------
+
+    //--------------------------------- applications -----------------------------------
+    { MODKEY|ShiftMask,             XK_l,      spawn,          {.v = lockercmd } },
 	{ MODKEY,                       XK_p,      spawn,          {.v = roficmd } },
     { MODKEY|ShiftMask,             XK_p,      spawn,          {.v = powermenucmd } },
     { MODKEY,                       XK_c,      spawn,          {.v = clipboardcmd } },
@@ -82,6 +100,8 @@ static const Key keys[] = {
     { MODKEY,                       XK_s,      spawn,          {.v = filemanagercmd } },
     { MODKEY,                       XK_a,      spawn,          {.v = telegramcmd } },
     { MODKEY,                       XK_g,      spawn,          {.v = googlecmd } },
+    //----------------------------------------------------------------------------------
+
 	{ MODKEY,                       XK_b,      togglebar,      {0} },
 	{ MODKEY,                       XK_j,      focusstack,     {.i = +1 } },
 	{ MODKEY,                       XK_k,      focusstack,     {.i = -1 } },
@@ -89,9 +109,9 @@ static const Key keys[] = {
 	{ MODKEY,                       XK_d,      incnmaster,     {.i = -1 } },
 	{ MODKEY,                       XK_h,      setmfact,       {.f = -0.05} },
 	{ MODKEY,                       XK_l,      setmfact,       {.f = +0.05} },
-	{ MODKEY,                       XK_w, zoom,           {0} },
+	{ MODKEY,                       XK_w,      zoom,           {0} },
 	{ MODKEY,                       XK_Tab,    view,           {0} },
-	{ MODKEY,             XK_q,      killclient,     {0} },
+	{ MODKEY,                       XK_q,      killclient,     {0} },
 	{ MODKEY,                       XK_t,      setlayout,      {.v = &layouts[0]} },
 	{ MODKEY,                       XK_f,      setlayout,      {.v = &layouts[1]} },
 	{ MODKEY,                       XK_m,      setlayout,      {.v = &layouts[2]} },
