@@ -1,5 +1,6 @@
-void
-fibonacci(Monitor *mon, int s) {
+
+//------------------------ fibonacci function ------------------------------------
+void fibonacci(Monitor *mon, int s) {
 	unsigned int i, n, nx, ny, nw, nh;
 	Client *c;
 
@@ -54,13 +55,16 @@ fibonacci(Monitor *mon, int s) {
 		resize(c, nx + gap, ny + gap, nw - gap-gap - 2 * c->bw, nh - gap-gap - 2 * c->bw, 0);
 	}
 }
+//--------------------------------------------------------------------------------
 
-void
-dwindle(Monitor *mon) {
+//----------- dwindle --------
+void dwindle(Monitor *mon) {
 	fibonacci(mon, 1);
 }
+//----------------------------
 
-void
-spiral(Monitor *mon) {
+//--------- spiral -----------
+void spiral(Monitor *mon) {
 	fibonacci(mon, 0);
 }
+//----------------------------
