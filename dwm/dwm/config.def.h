@@ -84,6 +84,11 @@ static const char *brightnessupcmd[] = { "brightnessctl", "s", "10%+", NULL };
 static const char *brightnessdowncmd[] = { "brightnessctl", "s", "10%-", NULL };
 //-------------------------------------------------------------------
 
+//------------------------------ keyboard brightness ----------------
+static const char *keyboardbrightnessupcmd[] = { "brightnessctl", "--device", "smc::kbd_backlight", "s", "10%+", NULL };
+static const char *keyboardbrightnessdowncmd[] = { "brightnessctl", "--device", "smc::kbd_backlight", "s", "10%-", NULL };
+//-------------------------------------------------------------------
+
 static const Key keys[] = {
 	/* modifier                     key        function        argument */
 
@@ -96,6 +101,8 @@ static const Key keys[] = {
     { MODKEY,                       0x3d,      spawn,          {.v = pamixericmd } },
     //                              minus
     { MODKEY,                       0x2d,      spawn,          {.v = pamixerdcmd } },
+    //                              XF86AudioMute
+    { 0,                            0x1008ff12, spawn,         {.v = pamixermutecmd } },
     { MODKEY|ShiftMask,             XK_m,      spawn,          {.v = pamixermutecmd } },
     //----------------------------------------------------------------------------------
 
@@ -104,6 +111,13 @@ static const Key keys[] = {
     { 0,                            0x1008ff02, spawn,         {.v = brightnessupcmd } },
     //                              XF86MonBrightnessDown
     { 0,                            0x1008ff03, spawn,         {.v = brightnessdowncmd } },
+    //----------------------------------------------------------------------------------
+
+    //-------------------------------- keyboard brightness -----------------------------
+    //                              XF86KbdBrightnessUp
+    { 0,                            0x1008ff05, spawn,         {.v = keyboardbrightnessupcmd } },
+    //                              XF86KbdBrightnessDown
+    { 0,                            0x1008ff06, spawn,         {.v = keyboardbrightnessdowncmd } },
     //----------------------------------------------------------------------------------
 
     //--------------------------------- applications -----------------------------------
