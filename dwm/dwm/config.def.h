@@ -61,8 +61,13 @@ static const Layout layouts[] = {
 #define SHCMD(cmd) { .v = (const char*[]){ "/bin/sh", "-c", cmd, NULL } }
 
 /* commands */
-static char dmenumon[2] = "0"; /* component of dmenucmd, manipulated in spawn() */
+
+//------------------------------------------------- dmenu -------------------------------------------------
+static char dmenumon[2] = "0"; // component of dmenucmd, manipulated in spawn()
 static const char *dmenucmd[] = { "dmenu_run", "-m", dmenumon, "-fn", dmenufont, "-nb", col_gray1, "-nf", col_gray3, "-sb", col_cyan, "-sf", col_gray4, NULL };
+//---------------------------------------------------------------------------------------------------------
+
+//-------------------------- applications ---------------------------------------------------------
 static const char *termcmd[]  = { "kitty", NULL };
 static const char *roficmd[] = { "/home/tola/dotfiles/rofi/launcher/launcher.sh", NULL };
 static const char *powermenucmd[] = { "/home/tola/dotfiles/rofi/powermenu/powermenu.sh", NULL };
@@ -72,6 +77,7 @@ static const char *filemanagercmd[] = { "thunar", NULL };
 static const char *telegramcmd[] = { "telegram-desktop", NULL };
 static const char *googlecmd[] = { "google-chrome-stable", NULL };
 static const char *lockercmd[] = { "i3lock", "-c", "000000", NULL };
+//-------------------------------------------------------------------------------------------------
 
 //---------------------------- pamixer ------------------------------
 static const char *pamixericmd[] = { "pamixer", "-i", "10", NULL };
