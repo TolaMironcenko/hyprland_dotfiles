@@ -4,7 +4,7 @@
     "spacing": 4,
     "modules-left": ["custom/launcher", "cpu", "memory", "temperature", "disk", "custom/weather", "custom/updates", "custom/onscreenkeyboard", "hyprland/window"],
     "modules-center": ["hyprland/workspaces"],
-    "modules-right": ["privacy", "mpris", "cava", "pulseaudio", "network", "backlight", "keyboard-state", "hyprland/language", "battery", "battery#bat2", "clock", "tray", "custom/power"],
+    "modules-right": ["privacy", "mpris", "pulseaudio", "network", "backlight", "keyboard-state", "hyprland/language", "battery", "battery#bat2", "clock", "tray", "custom/power"],
     "hyprland/workspaces": {
         "format": "{icon}",
         // "format-icons": {
@@ -80,7 +80,7 @@
     },
     "network": {
         "format-wifi": "{essid} ({signalStrength}%) 󰤨",
-        "format-ethernet": "{ipaddr}/{cidr} ",
+        "format-ethernet": "", //"{ipaddr}/{cidr} ",
         "tooltip-format": "{ifname} via {gwaddr} ",
         "format-linked": "{ifname} (No IP) ",
         "format-disconnected": "Disconnected ⚠",
@@ -119,7 +119,7 @@
     },
     "disk": {
         "interval": 30,
-        "format": "   {free}",
+        "format": "   {used}/{free}",
         "unit": "GB"
     },
     "custom/spotify": {

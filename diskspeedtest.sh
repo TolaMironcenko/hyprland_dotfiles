@@ -1,6 +1,0 @@
-#!/usr/bin/env sh
-
-HD=$1
-
-sudo hdparm -Tt $HD
-

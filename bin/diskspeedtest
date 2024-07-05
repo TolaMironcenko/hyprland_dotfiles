@@ -1,0 +1,11 @@
+#!/usr/bin/env sh
+
+HD=$1
+
+if [[ "$1" == "-h" ]] || [[ "$1" == "--help" ]]; then
+    echo "usage: $0 [HD]"
+    exit 0
+fi
+
+sudo hdparm -Tt $HD
+
