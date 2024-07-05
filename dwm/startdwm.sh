@@ -5,6 +5,7 @@ setxkbmap "us,ru" -option 'grp:win_space_toggle'
 picom -b
 dwmbar &
 dunst &
+~/dotfiles/bin/dpmsdisablexorg
 
 xrdb -merge ~/dotfiles/dwm/Xresources
 
