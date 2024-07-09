@@ -68,7 +68,7 @@ static const char *dmenucmd[] = { "dmenu_run", "-m", dmenumon, "-fn", dmenufont,
 //---------------------------------------------------------------------------------------------------------
 
 //-------------------------- applications ---------------------------------------------------------
-static const char *termcmd[]  = { "kitty", NULL };
+static const char *termcmd[]  = { "st", NULL };
 static const char *roficmd[] = { "/home/tola/dotfiles/rofi/launcher/launcher.sh", NULL };
 static const char *powermenucmd[] = { "/home/tola/dotfiles/rofi/powermenu/powermenu.sh", NULL };
 static const char *clipboardcmd[] = { "/home/tola/dotfiles/rofi/clipboard/clipboard.sh", NULL };

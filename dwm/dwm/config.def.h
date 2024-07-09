@@ -2,7 +2,7 @@
 
 /* appearance */
 static const unsigned int borderpx  = 2;        /* border pixel of windows */
-static const unsigned int gap     = 5;        /* gap pixel between windows */
+static const unsigned int gap     	= 5;        /* gap pixel between windows */
 static const unsigned int snap      = 32;       /* snap pixel */
 static const int showbar            = 1;        /* 0 means no bar */
 static const int topbar             = 1;        /* 0 means bottom bar */
@@ -68,7 +68,7 @@ static const char *dmenucmd[] = { "dmenu_run", "-m", dmenumon, "-fn", dmenufont,
 //---------------------------------------------------------------------------------------------------------
 
 //-------------------------- applications ---------------------------------------------------------
-static const char *termcmd[]  = { "kitty", NULL };
+static const char *termcmd[]  = { "st", NULL };
 static const char *roficmd[] = { "/home/tola/dotfiles/rofi/launcher/launcher.sh", NULL };
 static const char *powermenucmd[] = { "/home/tola/dotfiles/rofi/powermenu/powermenu.sh", NULL };
 static const char *clipboardcmd[] = { "/home/tola/dotfiles/rofi/clipboard/clipboard.sh", NULL };
