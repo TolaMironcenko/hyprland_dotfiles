@@ -1,1 +1,7 @@
-Xcursor.size: 24
+cursor.size: 24
+
+xterm*Background: black
+xterm*Foreground: white
+xterm*faceName: JetBrainsMono Nerd Font Mono
+xterm*faceSize: 14
+
