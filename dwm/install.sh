@@ -30,3 +30,14 @@ else
 fi
 # ----------------------
 
+#--------- slstatus ------------
+printf "$GREEN installing slstatus...$RESET"
+cd ~/dotfiles/dwm/slstatus
+sudo make install &> /dev/null
+if [ $? -eq 0 ]; then
+    printf "[$GREEN ok $RESET]\n"
+else
+    printf "[$RED err $RESET]\n"
+fi
+#-------------------------------
+
