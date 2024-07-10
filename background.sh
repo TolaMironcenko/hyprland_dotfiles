@@ -12,6 +12,7 @@ while [ true ]; do
             hyprctl hyprpaper unload all
             hyprctl hyprpaper preload $random_background
             hyprctl hyprpaper wallpaper "$monitor, $random_background"
+            sleep 2
         done
     fi
     sleep 60
