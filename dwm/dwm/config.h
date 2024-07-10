@@ -138,6 +138,12 @@ static const Key keys[] = {
     { MODKEY,                       XK_g,      spawn,          {.v = googlecmd } },
     //----------------------------------------------------------------------------------
 
+	//------------------------------------ gaps ----------------------------
+	{ MODKEY|ShiftMask,				XK_minus,  setgaps,        {.i = -1 } },
+	{ MODKEY|ShiftMask,				XK_equal,  setgaps,        {.i = +1 } },
+	{ MODKEY|ShiftMask,				XK_0,      setgaps,        {.i = 0 } },
+	//----------------------------------------------------------------------
+
 	{ MODKEY,                       XK_b,      togglebar,      {0} },
 	{ MODKEY,                       XK_j,      focusstack,     {.i = +1 } },
 	{ MODKEY,                       XK_k,      focusstack,     {.i = -1 } },
