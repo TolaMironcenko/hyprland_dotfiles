@@ -142,7 +142,7 @@ static const Key keys[] = {
 	//------------------------------------ gaps ----------------------------
 	{ MODKEY|ShiftMask,				XK_minus,  setgaps,        {.i = -1 } },
 	{ MODKEY|ShiftMask,				XK_equal,  setgaps,        {.i = +1 } },
-	{ MODKEY|ShiftMask,				XK_0,      setgaps,        {.i = 0 } },
+	{ MODKEY|ShiftMask,				XK_n,      setgaps,        {.i = 0 } },
 	//----------------------------------------------------------------------
 	{ MODKEY,                       XK_b,      togglebar,      {0} },
 	{ MODKEY,                       XK_j,      focusstack,     {.i = +1 } },
