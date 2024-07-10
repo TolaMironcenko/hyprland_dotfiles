@@ -2,7 +2,8 @@
 
 setxkbmap "us,ru" -option 'grp:win_space_toggle'
 ~/dotfiles/dwm/background.sh &
-dwmbar &
+#dwmbar &
+slstatus &
 dunst &
 ~/dotfiles/bin/dpmsdisablexorg
 
