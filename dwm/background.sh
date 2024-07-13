@@ -1,6 +1,6 @@
 #!/bin/sh
 
-directory=~/Pictures/hyprpaper/images
+directory=~/Pictures/wallpaper
 
 while true; do
     if [ -d "$directory" ]; then
