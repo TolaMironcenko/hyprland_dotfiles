@@ -12,21 +12,34 @@ if [[ "$batteries" == "" ]]; then
     exit 1;
 fi
 
-for i in $batteries; do
-    batfull=$(cat /sys/class/power_supply/$i/energy_full)
-    batnow=$(cat /sys/class/power_supply/$i/energy_now)
-    batperc=$((($batnow/($batfull/100))))
+case "$1" in
+    "-c")
+        for i in $batteries; do
+            batfull=$(cat /sys/class/power_supply/$i/energy_full)
+            batnow=$(cat /sys/class/power_supply/$i/energy_now)
+            batperc=$((($batnow/($batfull/100))))
 
-    if [[ "$batperc" -le "20" ]]; then
-        printf "$Yellow**$Color_off $i: $Red$batperc$Color_off\n"
-        exit 0
-    fi
+            if [[ "$batperc" -le "20" ]]; then
+                printf "$Yellow**$Color_off $i: $Red$batperc$Color_off\n"
+                exit 0
+            fi
 
-    if [[ "$batperc" -le "70" ]]; then
-        printf "$Yellow**$Color_off $i: $Yellow$batperc$Color_off\n"
-        exit 0
-    fi
+            if [[ "$batperc" -le "70" ]]; then
+                printf "$Yellow**$Color_off $i: $Yellow$batperc$Color_off\n"
+                exit 0
+            fi
 
-    printf "$Yellow**$Color_off $i: $Green$batperc$Color_off\n"
-done
+            printf "$Yellow**$Color_off $i: $Green$batperc$Color_off\n"
+        done
+        ;;
+    "-j")
+        for i in $batteries; do
+            batfull=$(cat /sys/class/power_supply/$i/energy_full)
+            batnow=$(cat /sys/class/power_supply/$i/energy_now)
+            batperc=$((($batnow/($batfull/100))))
+
+            printf "$batperc \n"
+        done
+        ;;
+esac
 
