@@ -7,7 +7,7 @@ echo $batperc
 while true; do
     for i in $batperc; do
         if [[ "$i" -le "20" ]]; then
-            notify-send "battery low: $i%" -u critical
+            notify-send "Battery low: $i%" -u critical
             sleep 60
         fi
     done
