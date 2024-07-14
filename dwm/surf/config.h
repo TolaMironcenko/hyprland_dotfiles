@@ -120,6 +120,7 @@ static SiteSpecific certs[] = {
 	{ "://suckless\\.org/", "suckless.org.crt" },
 };
 
+#define HOMEPAGE "https://google.ru"
 #define MODKEY GDK_CONTROL_MASK
 
 /* hotkeys */
