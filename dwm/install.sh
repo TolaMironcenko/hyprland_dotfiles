@@ -10,8 +10,7 @@ RED='\033[0;31m'
 # -------- dwm ---------
 printf "$GREEN installing dwm...$RESET"
 cd ~/dotfiles/dwm/dwm
-make &> /dev/null
-sudo make install &> /dev/null
+sudo make clean install &> /dev/null
 if [ $? -eq 0 ]; then
     printf "[$GREEN ok $RESET]\n"
 else
@@ -33,11 +32,33 @@ fi
 #--------- slstatus ------------
 printf "$GREEN installing slstatus...$RESET"
 cd ~/dotfiles/dwm/slstatus
-sudo make install &> /dev/null
+sudo make clean install &> /dev/null
 if [ $? -eq 0 ]; then
     printf "[$GREEN ok $RESET]\n"
 else
     printf "[$RED err $RESET]\n"
 fi
 #-------------------------------
+
+#---------- st ------------------
+printf "$GREEN installing st terminal...$RESET"
+cd ~/dotfiles/dwm/st
+sudo make clean install &> /dev/null
+if [ $? -eq 0 ]; then
+    printf "[$GREEN ok $RESET]\n"
+else
+    printf "[$RED err $RESET]\n"
+fi
+#--------------------------------
+
+#---------- surf ------------------
+printf "$GREEN installing surf browser...$RESET"
+cd ~/dotfiles/dwm/surf
+sudo make clean install &> /dev/null
+if [ $? -eq 0 ]; then
+    printf "[$GREEN ok $RESET]\n"
+else
+    printf "[$RED err $RESET]\n"
+fi
+#----------------------------------
 
