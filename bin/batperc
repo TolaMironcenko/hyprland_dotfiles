@@ -7,13 +7,12 @@ Yellow='\033[1;33m'
 
 batteries=$(ls /sys/class/power_supply/ | grep BAT)
 
-if [[ "$batteries" == "" ]]; then
-    printf "$Yellow**$Red error:$Color_off no battery found\n"
-    exit 1;
-fi
-
 case "$1" in
     "-c")
+        if [[ "$batteries" == "" ]]; then
+            printf "$Yellow**$Red error:$Color_off no battery found\n"
+            exit 1;
+        fi
         for i in $batteries; do
             batfull=$(cat /sys/class/power_supply/$i/energy_full)
             batnow=$(cat /sys/class/power_supply/$i/energy_now)
@@ -33,6 +32,10 @@ case "$1" in
         done
         ;;
     "-j")
+        if [[ "$batteries" == "" ]]; then
+            echo no
+            exit 1;
+        fi
         for i in $batteries; do
             batfull=$(cat /sys/class/power_supply/$i/energy_full)
             batnow=$(cat /sys/class/power_supply/$i/energy_now)

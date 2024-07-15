@@ -4,12 +4,13 @@ batperc=$(~/dotfiles/bin/batperc -j)
 
 echo $batperc
 
-while true; do
-    for i in $batperc; do
-        if [[ "$i" -le "20" ]]; then
-            notify-send "Battery low: $i%" -u critical
-            sleep 60
-        fi
+if [[ "$batperc" != "no" ]]; then
+    while true; do
+        for i in $batperc; do
+            if [[ "$i" -le "20" ]]; then
+                notify-send "Battery low: $i%" -u critical
+                sleep 60
+            fi
+        done
     done
-done
-
+fi
