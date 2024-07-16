@@ -1,5 +1,6 @@
 #!/bin/sh
 
+export GTK_THEME=Adwaita:dark
 setxkbmap "us,ru" -option 'grp:win_space_toggle'
 ~/dotfiles/dwm/background.sh &
 #dwmbar &
