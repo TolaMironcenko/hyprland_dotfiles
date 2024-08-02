@@ -5,3 +5,9 @@ xterm*Foreground: white
 xterm*faceName: JetBrainsMono Nerd Font Mono
 xterm*faceSize: 14
 
+dwm.normbordercolor: #444444
+dwm.normbgcolor: #222222
+dwm.normfgcolor: #bbbbbb
+dwm.selbordercolor: #00ffff
+dwm.selbgcolor: #000000
+dwm.selfgcolor: #eeeeee
