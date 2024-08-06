@@ -1,0 +1,6 @@
+#!/bin/sh
+
+while true; do
+	~/dotfiles/dwm/slstatus/components/wttr.sh
+	sleep 1800
+done

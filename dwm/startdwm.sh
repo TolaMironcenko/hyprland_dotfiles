@@ -7,6 +7,7 @@ setxkbmap "us,ru" -option 'grp:win_space_toggle'
 slstatus &
 dunst &
 ~/dotfiles/bin/dpmsdisablexorg
+~/dotfiles/dwm/slstatus/components/wttr.sh
 
 xrdb -merge ~/dotfiles/dwm/Xresources
 
