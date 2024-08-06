@@ -42,8 +42,8 @@ call plug#end()
 nnoremap <C-a> :NERDTreeFocus<CR>
 inoremap <C-a> <Esc>:NERDTreeFocus<CR>
 nnoremap <C-e> :NERDTree<CR>
-nnoremap <C-w> :NERDTreeToggle<CR>
-inoremap <C-w> :NERDTreeToggle<CR>
+nnoremap <C-z> :NERDTreeToggle<CR>
+inoremap <C-z> :NERDTreeToggle<CR>
 nnoremap <C-g> :NERDTreeRefresh<CR>
 inoremap <C-g> <Esc>:NERDTreeRefresh<CR>
 "------------ tabs -----------------------
