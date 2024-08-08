@@ -19,17 +19,6 @@ static char *colors[][3] = {
        [SchemeNorm] = { normfgcolor, normbgcolor, normbordercolor },
        [SchemeSel]  = { selfgcolor,  selbgcolor,  selbordercolor  },
 };
-// static const char col_gray1[]       = "#222222";
-// static const char col_gray2[]       = "#444444";
-// static const char col_gray3[]       = "#bbbbbb";
-// static const char col_gray4[]       = "#eeeeee";
-// static const char col_cyan[]        = "#00ffff";
-// static const char color_black[]     = "#000000";
-// static const char *colors[][3]      = {
-// 	/*               fg         bg         border   */
-// 	[SchemeNorm] = { col_gray3, col_gray1, col_gray2 },
-// 	[SchemeSel]  = { col_gray4, color_black,  col_cyan  },
-// };
 
 /* tagging */
 static const char *tags[] = { "1", "2", "3", "4", "5", "6", "7", "8", "9" };
@@ -89,9 +78,9 @@ static const char *lockercmd[] = { "i3lock", "-c", "000000", NULL };
 //-------------------------------------------------------------------------------------------------
 
 //---------------------------- pamixer ------------------------------
-static const char *pamixericmd[] = { "pamixer", "-i", "10", NULL };
-static const char *pamixerdcmd[] = { "pamixer", "-d", "10", NULL };
-static const char *pamixermutecmd[] = { "pamixer", "-t", NULL };
+static const char *pamixericmd[] = { "/home/tola/dotfiles/dwm/bin/volume", "--inc", NULL };
+static const char *pamixerdcmd[] = { "/home/tola/dotfiles/dwm/bin/volume", "--dec", NULL };
+static const char *pamixermutecmd[] = { "/home/tola/dotfiles/dwm/bin/volume", "--toggle", NULL };
 //-------------------------------------------------------------------
 
 //----------------------------- brightness --------------------------

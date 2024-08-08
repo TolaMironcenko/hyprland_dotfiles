@@ -3,11 +3,12 @@
 export GTK_THEME=Adwaita:dark
 setxkbmap "us,ru" -option 'grp:win_space_toggle'
 ~/dotfiles/dwm/background.sh &
-#dwmbar &
+# dwmbar &
+# ~/dotfiles/dwm/bin/picom
+~/dotfiles/dwm/bin/wttrd &
 slstatus &
 dunst &
 ~/dotfiles/bin/dpmsdisablexorg
-~/dotfiles/dwm/bin/wttrd &
 
 xrdb -merge ~/dotfiles/dwm/Xresources
 
