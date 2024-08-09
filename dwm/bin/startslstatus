@@ -1,0 +1,11 @@
+#!/bin/sh
+
+~/dotfiles/dwm/bin/wttrd &
+while true; do
+    if [ -f /tmp/wttr ]; then
+        slstatus &
+        break
+    fi
+    sleep 1
+done
+
