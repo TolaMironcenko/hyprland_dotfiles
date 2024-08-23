@@ -5,5 +5,10 @@ if [[ "$(id -u)" != "0" ]]; then
     exit 1
 fi
 
-ip route del default via 172.17.132.1 dev enp3s0
-ip route add 172.17.0.0/24 via 172.17.132.1 dev enp3s0
+#ip route del default via 172.17.132.1 dev enp3s0
+#ip route add 172.17.0.0/16 via 172.17.132.1 dev enp3s0
+
+ip route del default via 192.168.48.1 dev enp3s0 
+ip route add 172.17.0.0/16 via 192.168.48.1 dev enp3s0
+ip route add 192.168.48.0/23 via 192.168.48.1 dev enp3s0
+
