@@ -2,10 +2,10 @@ yabai -m config                                 \
     layout                      bsp         	\
 	auto_balance                on				\
     top_padding                 5             	\
-    bottom_padding              10            	\
-    left_padding                12             	\
-    right_padding               12              \
-    window_gap                  10              \
+    bottom_padding              5           	\
+    left_padding                5             	\
+    right_padding               5               \
+    window_gap                  5               \
 	mouse_drop_action 	       	swap			\
     focus_follows_mouse 	   	autofocus		\
 	mouse_follows_focus			off        		\
