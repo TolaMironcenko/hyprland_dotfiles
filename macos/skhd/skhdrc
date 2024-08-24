@@ -1,0 +1,24 @@
+lalt - return: /Applications/kitty.app/Contents/MacOS/kitty --single-instance -d ~
+lalt - t: open ~/
+
+lalt - q: yabai -m window --close
+
+lalt - h : yabai -m window --focus west
+lalt - l: yabai -m window --focus east
+lalt - j: yabai -m window --focus south
+lalt - k: yabai -m window --focus north
+
+lalt + shift - h : yabai -m window --warp west || $(yabai -m window --display west && yabai -m display --focus west && yabai -m window --warp last) || yabai -m window --move rel:-10:0
+lalt + shift - j : yabai -m window --warp south || $(yabai -m window --display south && yabai -m display --focus south) || yabai -m window --move rel:0:10
+lalt + shift - k : yabai -m window --warp north || $(yabai -m window --display north && yabai -m display --focus north) || yabai -m window --move rel:0:-10
+lalt + shift - l : yabai -m window --warp east || $(yabai -m window --display east && yabai -m display --focus east && yabai -m window --warp first) || yabai -m window --move rel:10:0
+
+lalt + shift - 1 : SPACES=($(yabai -m query --displays --display | jq '.spaces[]')) && [[ -n $SPACES[1] ]] \
+                  && yabai -m window --space $SPACES[1] && yabai -m window --space 1 && yabai -m space --switch 1
+lalt + shift - 2 : SPACES=($(yabai -m query --displays --display | jq '.spaces[]')) && [[ -n $SPACES[2] ]] \
+                  && yabai -m window --space $SPACES[2]
+
+
+lalt - 1: yabai --start-service
+lalt - 0: yabai --stop-service
+lalt - 2: yabai --restart-service
