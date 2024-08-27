@@ -1,6 +1,7 @@
 
 export PATH=$PATH:~/dotfiles/bin:~/dotfiles/hypr/bin:~/dotfiles/dwm/bin
 
+alias psa='busybox ps'
 alias c='clear'
 
 alias g='git'
