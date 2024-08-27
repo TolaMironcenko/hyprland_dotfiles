@@ -1,6 +1,8 @@
 
 export PATH=$PATH:~/dotfiles/bin:~/dotfiles/hypr/bin:~/dotfiles/dwm/bin
 
+alias c='clear'
+
 alias g='git'
 alias ga='git add'
 alias gaa='git add --all'
