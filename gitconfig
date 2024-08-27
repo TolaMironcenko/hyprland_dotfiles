@@ -9,3 +9,4 @@
     c = commit -m
     cl = clone
     ch = checkout
+    s = status
