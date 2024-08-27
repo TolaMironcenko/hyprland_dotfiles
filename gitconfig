@@ -1,5 +1,11 @@
 [user]
     name = TolaMironcenko
     email = mironcenkotola@gmail.com
+    username = TolaMironcenko
 [init]
 	defaultBranch = main
+[alias]
+    a = add .
+    c = commit -m
+    cl = clone
+    ch = checkout
