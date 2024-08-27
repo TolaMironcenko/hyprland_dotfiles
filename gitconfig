@@ -10,3 +10,5 @@
     cl = clone
     ch = checkout
     s = status
+    ps = push
+    pl = pull
