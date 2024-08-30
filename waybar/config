@@ -4,7 +4,7 @@
     "spacing": 4,
     "modules-left": ["custom/launcher", "cpu", "memory", "temperature", "disk", "custom/weather", "custom/updates", "custom/onscreenkeyboard", "hyprland/window"],
     "modules-center": ["hyprland/workspaces"],
-    "modules-right": ["mpris", "network", "backlight", "keyboard-state", "hyprland/language", "battery", "battery#bat2", "clock", "tray", "custom/power"],
+    "modules-right": ["pulseaudio", "mpris", "network", "backlight", "keyboard-state", "hyprland/language", "battery", "battery#bat2", "clock", "tray", "custom/power"],
     "hyprland/workspaces": {
         "format": "{icon}",
         // "format-icons": {
