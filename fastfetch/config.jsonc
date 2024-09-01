@@ -3,6 +3,11 @@
   "display": {
     "separator": " ─▶ "
   },
+  "logo": {
+    "source": "~/dotfiles/hypr/pictures/user.jpeg",
+    "width": 50,
+    "height": 22
+  },
   "modules": [
     "title",
     {
