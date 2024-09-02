@@ -11,7 +11,7 @@
 @define-color text-color rgb(255, 255, 255);
 @define-color text-color-disabled rgb(150, 150, 150);
 @define-color bg-selected rgb(0, 128, 255);
-/* @import url("/home/tola/.cache/wal/colors-waybar.css") */
+@import url("/home/tola/.cache/wal/colors-waybar.css")
 
 .testing {
   background-color: red;
