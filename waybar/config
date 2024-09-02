@@ -229,7 +229,7 @@
             "playing": "",
 		    "paused": ""
 	    },
-        "on-click-right": "~/dotfiles/eww/toggle_music",
+        "on-click-right": "~/dotfiles/ags/media/toggle_media",
 	    // "ignored-players": ["firefox"]
     }
 }
