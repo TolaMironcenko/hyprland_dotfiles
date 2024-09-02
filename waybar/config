@@ -38,7 +38,8 @@
     "hyprland/language": {
         "format": "{}",
         "format-en": "US",
-        "format-ru": "RU"
+        "format-ru": "RU",
+        "on-click": "swaync-client -t"
     },
     "tray": {
         "spacing": 10

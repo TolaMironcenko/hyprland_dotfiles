@@ -27,11 +27,13 @@
 }
 
 .player scale.position trough {
-    min-height: 8px;
+    min-height: 10px;
+    border-radius: 10px;
 }
 
 .player scale.position highlight {
     background-color: @theme_fg_color;
+    border-radius: 10px;
 }
 
 .player scale.position slider {
@@ -39,9 +41,11 @@
 }
 
 .player button {
-    min-height: 1em;
-    min-width: 1em;
+    min-height: 2em;
+    min-width: 2em;
+    border-radius: 2em;
     padding: .3em;
+    border: none;
 }
 
 .player button.play-pause {
