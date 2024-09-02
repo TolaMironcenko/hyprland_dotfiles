@@ -11,7 +11,7 @@ Utils.timeout(100, () => Utils.notify({
 }))
 
 App.config({
-    style: App.configDir + "/style.css",
+    style: "./style.css",
     windows: [
         NotificationPopups(),
     ],
