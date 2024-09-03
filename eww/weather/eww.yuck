@@ -1,0 +1,26 @@
+; Weather data
+(defpoll weatherdata :interval "15m" `wttr/wttr.py`)
+
+(defwidget weather []
+    (box :class "genwin" :style "background-image: url('images/bg.png');background-size: cover;"
+        (box :orientation "v" :spacing 10 :space-evenly false :vexpand false :hexpand false
+            (box :orientation "h" :spacing 0 :vexpand false :hexpand false
+                (label :class "label_temp" :halign "center" :style "color: white;" :text "${weatherdata.current_condition[0].temp_C}")
+                ; (label :class "iconweather" :halign "center" :text "${weatherdata.current_condition[0].weatherCode}")
+            )
+            (box :orientation "v" :spacing 10 :halign "center" :space-evenly false :vexpand false :hexpand false
+                (label :class "label_stat" :text "${weatherdata.current_condition[0].weatherDesc[0].value}")
+                (box :orientation "h" :spacing 10 :space-evenly false :vexpand false :hexpand false
+                    (label :class "label_quote" :text "${weatherdata.nearest_area[0].country[0].value}")
+                    (label :class "label_quote" :text "${weatherdata.nearest_area[0].region[0].value}")
+                )
+            )
+        )
+    )
+)
+
+; Weather window
+(defwindow weather :stacking "fg" :focusable true :exclusive true :screen 1 :windowtype "dock"
+	    :geometry (geometry :x 100 :y 100 :width 610 :height 280)
+					(weather)
+)

@@ -1,0 +1,28 @@
+/** Global *******************************************/
+*{
+	all: unset;
+	font-family: feather;
+	font-family: Iosevka;
+}
+
+/** Background ***************************************/
+.bg {
+	// background-image: url("images/bg.png");
+	background-color: #474D59;
+	opacity: 1;
+}
+
+/** Generic window ***********************************/
+.genwin {
+	background-color: #2E3440;
+	border-radius: 16px;
+    padding: 20px;
+}
+
+.label_temp {
+    font-size: 100;
+}
+
+.label_stat {
+	font-size: 50;
+}

@@ -135,7 +135,7 @@
     "custom/weather": {
         "format": "{}",
         "tooltip": true,
-        "interval": 3600,
+        "interval": 900,
         "exec": "wttrbar --location tomsk",
         "return-type": "json"
     },
