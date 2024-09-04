@@ -138,7 +138,7 @@
         "interval": 900,
         "exec": "wttrbar --location tomsk",
         "return-type": "json",
-        "on-click": "ags -c ~/dotfiles/ags/weather/config.js"
+        "on-click": "~/dotfiles/hypr/bin/toggle_weather_ags"
     },
     "custom/pacman": {
         "format": "{}  ",

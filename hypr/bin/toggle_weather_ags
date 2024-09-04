@@ -1,0 +1,9 @@
+#!/bin/sh
+
+if [ ! -f ~/.ags_weather ]; then
+	ags --bus-name weather -c ~/dotfiles/ags/weather/config.js &
+	touch ~/.ags_weather
+else
+    ags --bus-name weather -c ~/dotfiles/ags/weather/config.js --quit
+	rm ~/.ags_weather
+fi

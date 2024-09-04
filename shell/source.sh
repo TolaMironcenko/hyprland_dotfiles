@@ -3,6 +3,9 @@ export PATH=$PATH:~/dotfiles/bin:~/dotfiles/hypr/bin:~/dotfiles/dwm/bin/:~/.carg
 
 alias psa='busybox ps'
 alias c='clear'
+alias e='echo'
+alias s='source'
+alias kcat='kitty icat'
 
 alias g='git'
 alias ga='git add'
@@ -33,3 +36,6 @@ alias gra='git remote add'
 alias grrm='git remote remove'
 alias gstall='git stash --all'
 alias gst='git status'
+
+
+alias una='uname -a'
