@@ -137,14 +137,15 @@
         "tooltip": true,
         "interval": 900,
         "exec": "wttrbar --location tomsk",
-        "return-type": "json"
+        "return-type": "json",
+        "on-click": "ags -c ~/dotfiles/ags/weather/config.js"
     },
     "custom/pacman": {
         "format": "{}  ",
         "interval": 3600,                     // every hour
         "exec": "checkupdates | wc -l",       // # of updates
         "exec-if": "exit 0",                  // always run; consider advanced run conditions
-        "on-click": "termite -e 'sudo pacman -Syu'; pkill -SIGRTMIN+8 waybar", // update system
+        "on-click": "echo click", // update system
         "signal": 8
     },
    "custom/updates": {
@@ -154,12 +155,13 @@
            "has-updates": "󱍷",
            "updated": "󰂪"
        },
+       "on-click": "~/dotfiles/hypr/bin/startupdate.sh",
        "exec-if": "which waybar-module-pacman-updates",
        "exec": "waybar-module-pacman-updates  --interval-seconds 5 --network-interval-seconds 300"
    },
    "custom/onscreenkeyboard": {
         "format": " ",
-        "on-click": "~/dotfiles/toggle_keyboard.sh"
+        "on-click": "~/dotfiles/hypr/bin/toggle_keyboard.sh"
     },
    "bluetooth": {
         "format": " {status}",
