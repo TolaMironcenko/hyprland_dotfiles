@@ -6,6 +6,7 @@ alias c='clear'
 alias e='echo'
 alias s='source'
 alias kcat='kitty icat'
+alias ff='fastfetch'
 
 alias g='git'
 alias ga='git add'
