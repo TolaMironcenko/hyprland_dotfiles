@@ -1,3 +1,5 @@
+import Weather from "./weather_service.js"
+
 export default () => Widget.Box(
     { 
         class_name: "weather",
@@ -146,18 +148,27 @@ export default () => Widget.Box(
                 },
                 Widget.Label({
                     class_name: "title",
-                    css: "color: black;font-size: 20px;",
+                    css: "color: black;font-size: 25px;",
                     wrap: true,
-                    label: "",
-                    hpack: "start"
+                    // label: "",
+                    hpack: "start",
+                    setup: self => self.hook(Weather, () => {
+                        Weather.weatherData
+                        self.label = `${Weather._temperatureWeather.current_condition[0].weatherCode}`
+                    })
                 }),
                 Widget.Box({hexpand: true}),
                 Widget.Label({
                     class_name: "title",
                     css: "color: black;margin-right: 10px;font-size: 20px;",
                     wrap: true,
-                    label: "↑ 10  ↓ 4  FRI",
-                    hpack: "end"
+                    // label: "↑ 10  ↓ 4  FRI",
+                    hpack: "end",
+                    setup: self => self.hook(Weather, () => {
+                        // self.label = "hello world"
+                        print(Weather.weatherData)
+                        self.label = `↑ ${Weather._temperatureWeather.weather[0].maxtempC} ↓ ${Weather._temperatureWeather.weather[0].mintempC} ${Weather._temperatureWeather.weather[0].date}`
+                    }),
                 })
             ),
             Widget.Box(

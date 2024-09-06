@@ -11,21 +11,22 @@ class Weather extends Service {
     }
 
     get weatherData() {
-        Utils.execAsync(['bash', '-c', "openweathermap ags"]).catch(print);
+        this._temperatureWeather = JSON.parse(Utils.exec(['python', "wttr.py"])) // .then(temp => {console.log(temp)}).catch(print);
+        return this._temperatureWeather
     }
 
-    get temperatureWeather() {
-        return this._temperatureWeather;
-    }
-    setTemperatureWeather(temp) {
-        this._temperatureWeather = temp;
-        this.emit('changed');
-    }
+    // get temperatureWeather() {
+    //     return this._temperatureWeather;
+    // }
+    // setTemperatureWeather(temp) {
+    //     this._temperatureWeather = temp;
+    //     this.emit('changed');
+    // }
 
-    get tooltip() {
-        return this._tooltip;
-    }
-    setTooltip(text) { this._tooltip = text }
+    // get tooltip() {
+    //     return this._tooltip;
+    // }
+    // setTooltip(text) { this._tooltip = text }
 }
 
 export default new Weather();
