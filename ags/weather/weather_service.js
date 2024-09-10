@@ -11,7 +11,7 @@ class Weather extends Service {
     }
 
     get weatherData() {
-        this._temperatureWeather = JSON.parse(Utils.exec(['python', "wttr.py"])) // .then(temp => {console.log(temp)}).catch(print);
+        this._temperatureWeather = JSON.parse(Utils.exec(['python', "/home/tola/dotfiles/ags/weather/wttr.py"])) // .then(temp => {console.log(temp)}).catch(print);
         return this._temperatureWeather
     }
 
