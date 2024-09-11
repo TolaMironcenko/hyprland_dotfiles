@@ -1,1 +1,1 @@
-/samba/public   *(rw)
+/samba/public   *(rw,insecure)
