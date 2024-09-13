@@ -1,7 +1,10 @@
 {
     "layer": "top",
-    "height": 15,
-    "margin": 2,
+    "height": 30,
+    "margin-top": 2,
+    "margin-left": 5,
+    "margin-right": 5,
+    "margin-bottom": 0,
     "spacing": 4,
     "modules-left": ["custom/launcher", "cpu", "memory", "temperature", "disk", "custom/weather", "custom/updates", "custom/onscreenkeyboard", "hyprland/window"],
     "modules-center": ["hyprland/workspaces"],
