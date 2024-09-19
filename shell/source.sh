@@ -43,7 +43,9 @@ alias gst='git status'
 
 #--- docker ---
 alias dpa='docker ps -a'
+alias dp='docker ps'
 alias dia='docker images -a'
+alias di='docker images'
 alias dcrm='docker container rm'
 alias dirm='docker image rm'
 alias dr='docker run'
