@@ -1,13 +1,17 @@
 
 export PATH=$PATH:~/dotfiles/bin:~/dotfiles/hypr/bin:~/dotfiles/dwm/bin/:~/.cargo/bin
 
+#--- sys ---
 alias psa='busybox ps'
 alias c='clear'
 alias e='echo'
 alias s='source'
 alias kcat='kitty icat'
 alias ff='fastfetch'
+alias una='uname -a'
+#-----------
 
+#--- git ---
 alias g='git'
 alias ga='git add'
 alias gaa='git add --all'
@@ -24,10 +28,8 @@ alias gd='git diff'
 alias gcf='git config --list'
 alias gf='git fetch'
 alias ghh='git help'
-
 alias glgg='git log --graph'
 alias glg='git log --stat'
-
 alias gm='git merge'
 alias gl='git pull'
 alias gpr='git pull --rebase'
@@ -37,6 +39,14 @@ alias gra='git remote add'
 alias grrm='git remote remove'
 alias gstall='git stash --all'
 alias gst='git status'
+#-----------
 
-
-alias una='uname -a'
+#--- docker ---
+alias dpa='docker ps -a'
+alias dia='docker images -a'
+alias dcrm='docker container rm'
+alias dirm='docker image rm'
+alias dr='docker run'
+alias ds='docker start'
+alias dst='docker stop'
+#--------------
