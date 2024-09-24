@@ -10,6 +10,11 @@ alias kcat='kitty icat'
 alias ff='fastfetch'
 alias una='uname -a'
 alias ifcnf='ifconfig'
+alias p='sudo pacman'
+alias psy='sudo pacman -Sy'
+alias psyu='sudo pacman -Syu'
+alias pi='sudo pacman -S'
+alias psc='sudo pacman -Ss'
 #-----------
 
 #--- git ---
