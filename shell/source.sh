@@ -15,6 +15,9 @@ alias psy='sudo pacman -Sy'
 alias psyu='sudo pacman -Syu'
 alias pi='sudo pacman -S'
 alias psc='sudo pacman -Ss'
+alias ipr='ip route'
+alias ipa='ip addr'
+alias ipl='ip link'
 #-----------
 
 #--- git ---
