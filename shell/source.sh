@@ -65,4 +65,5 @@ alias dr='docker run'               # run docker image as container
 alias ds='docker start'             # start docker container
 alias dst='docker stop'             # stop docker container
 alias dspa='docker system prune -a' # delete all docker data
+alias dcaq='docker ps -aq'          # stop all containers
 #--------------
