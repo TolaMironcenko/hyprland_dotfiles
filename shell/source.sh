@@ -9,6 +9,7 @@ alias s='source'
 alias kcat='kitty icat'
 alias ff='fastfetch'
 alias una='uname -a'
+alias ifcnf='ifconfig'
 #-----------
 
 #--- git ---
