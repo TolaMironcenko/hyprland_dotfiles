@@ -17,6 +17,7 @@ alias psy='sudo pacman -Sy'     # update repositories
 alias psyu='sudo pacman -Syu'   # upgrade system
 alias pi='sudo pacman -S'       # install package
 alias psc='sudo pacman -Ss'     # search package in repository
+alias pqdtq='sudo pacman -Qdtq' # list files without dependencies
 alias ipr='ip route'            # show routes
 alias ipa='ip addr'             # show addresses
 alias ipl='ip link'             # show links
