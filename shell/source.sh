@@ -1,5 +1,7 @@
 
+#--- path ---
 export PATH=$PATH:~/dotfiles/bin:~/dotfiles/hypr/bin:~/dotfiles/dwm/bin/:~/.cargo/bin
+#------------
 
 #--- sys ---
 alias psa='busybox ps'          # show all processes
@@ -22,6 +24,8 @@ alias sctl='systemctl'          # systemctl
 alias sctls='systemctl start'   # service start
 alias sctlst='systemctl status' # service status
 alias sctlp='systemctl stop'    # service stop
+alias H='Hyprland'              # start Hyprland
+alias sx='startx'               # startx - start xorg
 #-----------
 
 #--- git ---
