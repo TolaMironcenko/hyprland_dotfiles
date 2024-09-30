@@ -12,12 +12,18 @@ alias kcat='kitty icat'         # show image in kitty terminal
 alias ff='fastfetch'            # system data
 alias una='uname -a'            # system name
 alias ifcnf='ifconfig'          # ifconfig
+#--- pacman ---
 alias p='sudo pacman'           # pacman
 alias psy='sudo pacman -Sy'     # update repositories
 alias psyu='sudo pacman -Syu'   # upgrade system
 alias pi='sudo pacman -S'       # install package
 alias psc='sudo pacman -Ss'     # search package in repository
 alias pqdtq='sudo pacman -Qdtq' # list files without dependencies
+alias pq='sudo pacman -Q'       # list installed packages
+alias pql='sudo pacman -Ql'     # list files in packages
+alias prm='sudo pacman -R'      # delete pacman package
+alias prns='sudo pacman -Rns'   # delete pacman package with all dependencies
+#--------------
 alias ipr='ip route'            # show routes
 alias ipa='ip addr'             # show addresses
 alias ipl='ip link'             # show links
