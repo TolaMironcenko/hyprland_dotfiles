@@ -30,7 +30,6 @@ call plug#begin()
   Plug 'wolf-dog/nighted.vim'
   Plug 'ale-cci/aqua-vim'
   Plug 'ghifarit53/tokyonight-vim'
-  Plug 'valloric/youcompleteme'
   Plug 'Eliot00/git-lens.vim'
   Plug 'pangloss/vim-javascript'
   Plug 'mxw/vim-jsx'
