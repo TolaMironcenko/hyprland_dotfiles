@@ -25,10 +25,11 @@ alias prm='sudo pacman -R'      # delete pacman package
 alias prns='sudo pacman -Rns'   # delete pacman package with all dependencies
 #--------------
 #--- apt ---
-alias aptu='sudo apt update'      # update apt repositories
-alias apti='sudo apt install -y'  # install apt package
-alias aptui='sudo apt upgrade -y' # upgrade apt packages
-alias aptrm='sudo apt remove -y'  # remove apt package
+alias aptu='sudo apt update'             # update apt repositories
+alias apti='sudo apt install -y'         # install apt package
+alias aptui='sudo apt upgrade -y'        # upgrade apt packages
+alias aptrm='sudo apt remove -y'         # remove apt package
+alias aptautorm='sudo apt autoremove -y' # remove apt package with dependencies
 #-----------
 alias ipr='ip route'            # show routes
 alias ipa='ip addr'             # show addresses
