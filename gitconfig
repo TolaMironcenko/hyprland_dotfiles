@@ -9,6 +9,7 @@
     c = commit -m
     cl = clone
     ch = checkout
+    chb = checkout -b
     s = status
     ps = push
     pl = pull
