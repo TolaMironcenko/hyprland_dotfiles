@@ -1,3 +1,4 @@
 /samba/public   *(rw,insecure)
+/media *(rw,insecure)
 /dotfiles *(ro)
 /sshkeys *(ro)
