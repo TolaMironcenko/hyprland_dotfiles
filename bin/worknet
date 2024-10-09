@@ -6,7 +6,7 @@ if [[ "$(id -u)" != "0" ]]; then
 fi
 
 #ip route del default via 172.17.132.1 dev enp3s0
-ip route add 172.17.0.0/16 via 172.17.132.1 dev enp3s0
+ip route add 172.17.0.0/16 via 172.17.132.1 dev eno1
 
 #ip route del default via 192.168.48.1 dev enp3s0 
 #ip route add 172.17.0.0/16 via 192.168.48.1 dev enp3s0
