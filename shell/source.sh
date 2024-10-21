@@ -69,6 +69,7 @@ alias gpo='git push --set-upstream origin' # push to upstream repository and set
 alias gra='git remote add'                 # add remote repository
 alias grrm='git remote remove'             # remove remote repository
 alias gstall='git stash --all'             # stash all in repository
+alias gstc='git stash clear'               # clear git stash
 alias gst='git status'                     # status repository
 #-----------
 
