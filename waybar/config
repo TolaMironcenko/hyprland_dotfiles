@@ -136,6 +136,15 @@
         "on-scroll-down": "playerctl -p spotify previous",
         "exec-if": "pgrep spotfiy"
     },
+    //"custom/weather": {
+    //    "interval": 900,
+    //    "return-type": "json",
+    //    "exec": "waybar_weather_display --latitude 56.4884 --longitude 84.9480",
+    //    "format-alt": "{} ",
+    //    "format": "{alt} ",
+    //    "format-alt-click": "click-right",
+    //    "escape": true
+    //},
     "custom/weather": {
         "format": "{}",
         "tooltip": true,
