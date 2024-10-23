@@ -55,5 +55,15 @@
   "theme.bar.transparent": false,
   "theme.bar.opacity": 80,
   "theme.bar.buttons.opacity": 100,
-  "theme.bar.buttons.monochrome": false
+  "theme.bar.buttons.monochrome": false,
+  "theme.matugen": true,
+  "wallpaper.image": "/home/tola/Pictures/wallpaper/astronaut_jellyfish.jpg",
+  "theme.matugen_settings.mode": "dark",
+  "theme.matugen_settings.scheme_type": "monochrome",
+  "menus.dashboard.directories.left.directory1.command": "bash -c \"thunar $HOME/Downloads/\"",
+  "menus.dashboard.directories.left.directory2.command": "bash -c \"thunar $HOME/Videos/\"",
+  "menus.dashboard.directories.left.directory3.command": "bash -c \"thunar $HOME/Projects/\"",
+  "menus.dashboard.directories.right.directory1.command": "bash -c \"thunar $HOME/Documents/\"",
+  "menus.dashboard.directories.right.directory2.command": "bash -c \"thunar $HOME/Pictures/\"",
+  "menus.dashboard.directories.right.directory3.command": "bash -c \"thunar $HOME/\""
 }
