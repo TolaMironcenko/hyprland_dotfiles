@@ -1,6 +1,7 @@
 
 #--- path ---
 export PATH=$PATH:~/dotfiles/bin:~/dotfiles/hypr/bin:~/dotfiles/dwm/bin/:~/.cargo/bin
+export GTK2_RC_FILES=~/.config/gtk-2.0/gtkrc
 #------------
 
 #--- sys ---
