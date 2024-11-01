@@ -11,10 +11,19 @@ BLUE='\033[0;34m'
 interface=$1
 bytes=$2
 
+prev_tx_traffic=0
+prev_rx_traffic=0
+
 while true; do
     clear
     tx_traffic=$(cat /sys/class/net/${interface}/statistics/tx_bytes)
     rx_traffic=$(cat /sys/class/net/${interface}/statistics/rx_bytes)
+    tx_traffic_speed=$(($tx_traffic-$prev_tx_traffic))
+    rx_traffic_speed=$(($rx_traffic-$prev_rx_traffic))
+    # echo $tx_traffic_speed
+    # echo $rx_traffic_speed
+    prev_tx_traffic=$tx_traffic
+    prev_rx_traffic=$rx_traffic
 
     traffic_color=$GREEN
     if [[ $(echo $(($rx_traffic/1024/1024/1024))) > 5 ]]; then
@@ -24,12 +33,16 @@ while true; do
     fi
 
     if [[ $bytes == 'k' ]] || [[ $bytes == 'K' ]]; then
+        printf "$BLUE tx traffic speed$RESET = $(($tx_traffic_speed/1024)) Kb/s\n"
         printf "$BLUE tx traffic$RESET = $(($tx_traffic/1024)) Kb\n"
+        printf "$BLUE rx traffic speed$RESET = $(($rx_traffic_speed/1024)) Kb/s\n"
         printf "$traffic_color rx traffic$RESET = $(($rx_traffic/1024)) Kb\n"
     fi
 
     if [[ $bytes == 'm' ]] || [[ $bytes == 'M' ]]; then
+        printf "$BLUE tx traffic speed$RESET = $(($tx_traffic_speed/1024/1024)) Mb/s\n"
         printf "$BLUE tx traffic$RESET = $(($tx_traffic/1024/1024)) Mb\n"
+        printf "$BLUE rx traffic speed$RESET = $(($rx_traffic_speed/1024/1024)) Mb/s\n"
         printf "$traffic_color rx traffic$RESET = $(($rx_traffic/1024/1024)) Mb\n"
     fi
     
