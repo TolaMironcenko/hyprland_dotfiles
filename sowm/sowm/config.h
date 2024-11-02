@@ -6,7 +6,7 @@
 //-------------------
 
 const char* menu[]    = {"/home/tola/dotfiles/rofi/launcher/launcher.sh",      0};
-const char* term[]    = {"kitty",             0};
+const char* term[]    = {"st",             0};
 const char* scrot[]   = {"scr",            0};
 const char* briup[]   = {"bri", "10", "+", 0};
 const char* bridown[] = {"bri", "10", "-", 0};
