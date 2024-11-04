@@ -4,7 +4,7 @@ dwm/drw.o
 dwm/dwm.o
 dwm/util.o
 dwm/dwm-6.5.tar.gz
-*.0
+*.o
 dwmstatus/src/dwmstatus_std
 dwmstatus/src/dwmstatus_xcb
 dmenu/stest
