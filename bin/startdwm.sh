@@ -1,5 +1,6 @@
 #!/bin/sh
 
+~/dotfiles/bin/background.sh &
 setxkbmap "us,ru" -option 'grp:win_space_toggle'
 dunst &
 lxpolkit &
