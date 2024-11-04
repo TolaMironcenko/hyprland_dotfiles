@@ -1,9 +1,0 @@
-#!/bin/sh
-
-if [ ! -f ~/.eww_music ]; then
-    eww --config ~/dotfiles/eww open music
-    echo $! > ~/.eww_music
-else 
-    eww --config ~/dotfiles/eww close music
-    rm ~/.eww_music
-fi

@@ -1,7 +1,0 @@
-[Desktop Entry]
-Encoding=UTF-8
-Name=DWM
-Icon=dwm
-Comment=An dynamic window manager for linux xorg
-Exec=/home/tola/dotfiles/dwm/startdwm.sh
-Type=XSession
