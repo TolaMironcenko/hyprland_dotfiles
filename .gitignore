@@ -7,3 +7,6 @@ dwm/dwm-6.5.tar.gz
 *.0
 dwmstatus/src/dwmstatus_std
 dwmstatus/src/dwmstatus_xcb
+dmenu/stest
+dmenu/dmenu
+dmenu/dmenu-5.3.tar.gz

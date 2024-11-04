@@ -11,3 +11,9 @@ dwm.normfgcolor: #bbbbbb
 dwm.selbordercolor: #00ffff
 dwm.selbgcolor: #000000
 dwm.selfgcolor: #eeeeee
+
+dmenu.font: JetBrainsMono Nerd Font Mono
+dmenu.background: #222222
+dmenu.foreground: #bbbbbb
+dmenu.selbackground: #000000
+dmenu.selforeground: #eeeeee
