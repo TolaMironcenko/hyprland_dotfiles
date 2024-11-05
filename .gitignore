@@ -10,3 +10,5 @@ dwmstatus/src/dwmstatus_xcb
 dmenu/stest
 dmenu/dmenu
 dmenu/dmenu-5.3.tar.gz
+slstatus/components/*.o
+slstatus/slstatus
