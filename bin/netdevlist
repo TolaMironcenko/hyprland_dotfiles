@@ -1,0 +1,4 @@
+#!/bin/sh
+
+ls --color /sys/class/net
+
