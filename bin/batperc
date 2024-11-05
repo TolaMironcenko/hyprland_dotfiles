@@ -14,8 +14,8 @@ case "$1" in
             exit 1;
         fi
         for i in $batteries; do
-            batfull=$(cat /sys/class/power_supply/$i/energy_full)
-            batnow=$(cat /sys/class/power_supply/$i/energy_now)
+            batfull=$(cat /sys/class/power_supply/$i/charge_full)
+            batnow=$(cat /sys/class/power_supply/$i/charge_now)
             batperc=$((($batnow/($batfull/100))))
 
             if [[ "$batperc" -le "20" ]]; then
@@ -37,8 +37,8 @@ case "$1" in
             exit 1;
         fi
         for i in $batteries; do
-            batfull=$(cat /sys/class/power_supply/$i/energy_full)
-            batnow=$(cat /sys/class/power_supply/$i/energy_now)
+            batfull=$(cat /sys/class/power_supply/$i/charge_full)
+            batnow=$(cat /sys/class/power_supply/$i/charge_now)
             batperc=$((($batnow/($batfull/100))))
 
             printf "$batperc \n"
