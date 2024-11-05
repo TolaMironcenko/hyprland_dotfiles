@@ -4,7 +4,6 @@
 setxkbmap "us,ru" -option 'grp:win_space_toggle'
 dunst &
 lxpolkit &
-dwmstatus_xcb &
 
 xrdb -merge ~/dotfiles/Xresources
 
