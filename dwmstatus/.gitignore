@@ -1,9 +1,0 @@
-*.o
-*~
-*.sh
-build
-debug
-src/config.h
-src/dwmstatus_std
-src/dwmstatus_xcb
-
