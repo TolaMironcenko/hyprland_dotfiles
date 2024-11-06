@@ -1,11 +1,11 @@
 #!/bin/sh
 
-case "$(printf "Shutdown\nRestart\nLogout\nSuspend\nLock")" | dmenu \
-  -i -p \
-  "Power:" -l 5)" in
-    Shutdown) exec systemctl poweroff;;
-    Restart) exec systemctl reboot;;
-    Logout) killall startdwm.sh;;
-    Suspend) exec systemctl suspend;;
-    Lock) exec systemctl --user start lock.target;;
+case "$(printf "Shutdown\nRestart\nLogout\nSuspend\nLock" | dmenu \
+     -i -p \
+    "Power:" -l 5)" in
+        Shutdown) exec systemctl poweroff;;
+        Restart) exec systemctl reboot;;
+        Logout) kill -HUP $XDG_SESSION_PID;;
+        Suspend) exec systemctl suspend;;
+        Lock) exec systemctl --user start lock.target;;
 esac
