@@ -1,8 +1,8 @@
 #!/bin/sh
 
 case "$(printf "Shutdown\nRestart\nLogout\nSuspend\nLock" | dmenu \
-     -i -z 200 -p \
-    "Power:" -l 5)" in
+     -i -x 550 -y 300 -z 200 -p \
+    "" -l 5)" in
         Shutdown) exec systemctl poweroff;;
         Restart) exec systemctl reboot;;
         Logout) kill -HUP $XDG_SESSION_PID;;
