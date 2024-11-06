@@ -72,5 +72,5 @@ static const struct arg args[] = {
     { ram_perc, "[󰘚 %s%]", NULL },
     { disk_perc, "[ %s%]", "/" },
     { keymap,   "[%s]", NULL },
-    { wifi_perc, "[󱚻 %s%]", "wlan0" },
+    { wifi_perc, "[󱚻 %s%]", "wlp3s0" },
 };
