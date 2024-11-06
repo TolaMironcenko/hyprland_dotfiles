@@ -87,3 +87,10 @@ alias dst='docker stop'             # stop docker container
 alias dspa='docker system prune -a' # delete all docker data
 alias dcaq='docker ps -aq'          # stop all containers
 #--------------
+#--- bluetooth ---
+alias bctl="bluetoothctl"
+alias bctlc="bluetoothctl connect"
+alias bctld="bluetoothctl disconnect"
+alias bctll="bluetoothctl devices"
+alias bctls="bluetoothctl scan on"
+#-----------------
