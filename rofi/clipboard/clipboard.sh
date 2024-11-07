@@ -1,4 +1,4 @@
-#!/usr/bin/env zsh
+#!/bin/sh
 
 theme=~/dotfiles/rofi/clipboard/clipboard.rasi
 mode="clipboard:greenclip print"
