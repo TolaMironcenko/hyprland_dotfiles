@@ -9,14 +9,15 @@ export GTK2_RC_FILES=~/.config/gtk-2.0/gtkrc
 #--------------
 
 #--- sys ---
-alias psa='busybox ps'          # show all processes
-alias c='clear'                 # clear terminal screen
-alias e='echo'                  # print in terminal
-alias s='source'                # source
-alias kcat='kitty icat'         # show image in kitty terminal
-alias ff='fastfetch'            # system data
-alias una='uname -a'            # system name
-alias ifcnf='ifconfig'          # ifconfig
+alias psa='busybox ps'                                 # show all processes
+alias c='clear'                                        # clear terminal screen
+alias e='echo'                                         # print in terminal
+alias s='source'                                       # source
+alias kcat='kitty icat'                                # show image in kitty terminal
+alias ff='fastfetch'                                   # system data
+alias una='uname -a'                                   # system name
+alias ifcnf='ifconfig'                                 # ifconfig
+alias sudo='sudo -p "Give me your fucking password: "' # sudo prompt alias
 #--- pacman ---
 alias p='sudo pacman'           # pacman
 alias psy='sudo pacman -Sy'     # update repositories
