@@ -4,6 +4,10 @@ export PATH=$PATH:~/dotfiles/bin:~/dotfiles/hypr/bin:~/dotfiles/dwm/bin/:~/.carg
 export GTK2_RC_FILES=~/.config/gtk-2.0/gtkrc
 #------------
 
+#--- colors ---
+. ~/dotfiles/shell/colors.sh
+#--------------
+
 #--- sys ---
 alias psa='busybox ps'          # show all processes
 alias c='clear'                 # clear terminal screen
