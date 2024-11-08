@@ -6,9 +6,9 @@
     "margin-right": 5,
     "margin-bottom": 0,
     "spacing": 4,
-    "modules-left": ["custom/launcher", "cpu", "memory", "temperature", "disk", "custom/weather", "custom/updates", "custom/onscreenkeyboard", "hyprland/window"],
+    "modules-left": ["custom/launcher", "cpu", "memory", "temperature", "disk", "custom/weather", "custom/updates", "hyprland/window"],
     "modules-center": ["hyprland/workspaces"],
-    "modules-right": ["pulseaudio", "mpris", "network", "backlight", "keyboard-state", "hyprland/language", "battery", "battery#bat2", "clock", "tray", "custom/power"],
+    "modules-right": ["pulseaudio", "mpris", "backlight", "keyboard-state", "hyprland/language", "battery", "battery#bat2", "clock", "tray", "custom/power"],
     "hyprland/workspaces": {
         "format": "{icon}",
         // "format-icons": {
@@ -54,15 +54,15 @@
         "format-alt": "{:%Y-%m-%d}"
     },
     "cpu": {
-        "format": "{usage}% ",
+        "format": "  {usage}%",
         "tooltip": false
     },
     "memory": {
-        "format": "{}% "
+        "format": "  {}%"
     },
     "temperature": {
         "critical-threshold": 80,
-        "format": "{temperatureC}°C {icon}",
+        "format": "{icon} {temperatureC}°C",
         "format-icons": ["", "", ""]
     },
     "backlight": {
