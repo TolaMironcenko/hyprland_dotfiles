@@ -154,7 +154,7 @@
         "on-click": "~/dotfiles/hypr/bin/toggle_weather_ags"
     },
     "custom/pacman": {
-        "format": "{}  ",
+        "format": " {}",
         "interval": 3600,                     // every hour
         "exec": "checkupdates | wc -l",       // # of updates
         "exec-if": "exit 0",                  // always run; consider advanced run conditions
