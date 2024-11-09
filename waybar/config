@@ -6,7 +6,7 @@
     "margin-right": 5,
     "margin-bottom": 0,
     "spacing": 4,
-    "modules-left": ["custom/launcher", "cpu", "memory", "temperature", "disk", "custom/weather", "custom/updates", "custom/onscreenkeyboard", "hyprland/window"],
+    "modules-left": ["custom/launcher", "cpu", "memory", "temperature", "disk", "custom/weather", "custom/updates", "hyprland/window"],
     "modules-center": ["hyprland/workspaces"],
     "modules-right": ["pulseaudio", "mpris", "network", "backlight", "keyboard-state", "hyprland/language", "battery", "battery#bat2", "clock", "tray", "custom/power"],
     "hyprland/workspaces": {
@@ -54,11 +54,11 @@
         "format-alt": "{:%Y-%m-%d}"
     },
     "cpu": {
-        "format": "{usage}% ",
+        "format": " {usage}%",
         "tooltip": false
     },
     "memory": {
-        "format": "{}% "
+        "format": " {}%"
     },
     "temperature": {
         "critical-threshold": 80,
@@ -124,7 +124,7 @@
     },
     "disk": {
         "interval": 30,
-        "format": "   {used}/{free}",
+        "format": " {percentage_used}%",
         "unit": "GB"
     },
     "custom/spotify": {
