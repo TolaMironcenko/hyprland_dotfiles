@@ -54,11 +54,11 @@
         "format-alt": "{:%Y-%m-%d}"
     },
     "cpu": {
-        "format": "{usage}% ",
+        "format": "  {usage}%",
         "tooltip": false
     },
     "memory": {
-        "format": "{}% "
+        "format": "  {}%"
     },
     "temperature": {
         "critical-threshold": 80,
@@ -124,7 +124,7 @@
     },
     "disk": {
         "interval": 30,
-        "format": "   {used}/{free}",
+        "format": "  {percentage_used}%",
         "unit": "GB"
     },
     "custom/spotify": {
@@ -145,14 +145,14 @@
     //    "format-alt-click": "click-right",
     //    "escape": true
     //},
-    "custom/weather": {
-        "format": "{}",
-        "tooltip": true,
-        "interval": 900,
-        "exec": "wttrbar --location tomsk",
-        "return-type": "json",
-        "on-click": "~/dotfiles/hypr/bin/toggle_weather_ags"
-    },
+    //"custom/weather": {
+    //    "format": "{}",
+    //    "tooltip": true,
+    //    "interval": 900,
+    //    "exec": "wttrbar --location tomsk",
+    //    "return-type": "json",
+    //    "on-click": "~/dotfiles/hypr/bin/toggle_weather_ags"
+    //},
     "custom/pacman": {
         "format": "{}  ",
         "interval": 3600,                     // every hour

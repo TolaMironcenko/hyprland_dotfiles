@@ -1,9 +1,0 @@
-#!/bin/sh
-
-if [ ! -f ~/.ags_media ]; then
-    ags --bus-name media -c ~/dotfiles/ags/media/config.js &
-    echo $! > ~/.ags_media
-else
-    ags --bus-name media -c ~/dotfiles/ags/media/config.js --quit
-    rm ~/.ags_media
-fi

@@ -1,9 +1,0 @@
-#!/bin/sh
-
-if [ ! -f ~/.ags_notification_service ]; then
-    ags --bus-name notification_service -c ~/dotfiles/ags/notification-popups/config.js &
-    echo $! > ~/.ags_notification_service
-else
-    ags --bus-name notification_service -c ~/dotfiles/ags/notification-popups/config.js --quit
-    rm ~/.ags_notification_service
-fi
