@@ -1,14 +1,11 @@
-
-#--- path ---
+#--- path -------------------------------------------------------------------------------------------------------------------------------------------
 export PATH=$PATH:~/dotfiles/bin:~/dotfiles/hypr/bin:~/dotfiles/dwm/bin/:~/.cargo/bin
 export GTK2_RC_FILES=~/.config/gtk-2.0/gtkrc           # gtk2 theme
-#------------
-
-#--- colors ---
+#----------------------------------------------------------------------------------------------------------------------------------------------------
+#--- colors -----------------------------------------------------------------------------------------------------------------------------------------
 . ~/dotfiles/shell/colors.sh                           # include bash colors
-#--------------
-
-#--- sys ---
+#----------------------------------------------------------------------------------------------------------------------------------------------------
+#--- sys --------------------------------------------------------------------------------------------------------------------------------------------
 alias psa='busybox ps'                                 # show all processes
 alias c='clear'                                        # clear terminal screen
 alias e='echo'                                         # print in terminal
@@ -18,7 +15,7 @@ alias ff='fastfetch'                                   # system data
 alias una='uname -a'                                   # system name
 alias ifcnf='ifconfig'                                 # ifconfig
 alias sudo='sudo -p "Give me your fucking password: "' # sudo prompt alias
-#--- pacman ---
+#--- pacman -----------------------------------------------------------------------------------------------------------------------------------------
 alias p='sudo pacman'                                  # pacman
 alias psy='sudo pacman -Sy'                            # update repositories
 alias psyu='sudo pacman -Syu'                          # upgrade system
@@ -29,14 +26,14 @@ alias pq='sudo pacman -Q'                              # list installed packages
 alias pql='sudo pacman -Ql'                            # list files in packages
 alias prm='sudo pacman -R'                             # delete pacman package
 alias prns='sudo pacman -Rns'                          # delete pacman package with all dependencies
-#--------------
-#--- apt ---
+#----------------------------------------------------------------------------------------------------------------------------------------------------
+#--- apt --------------------------------------------------------------------------------------------------------------------------------------------
 alias aptu='sudo apt update'                           # update apt repositories
 alias apti='sudo apt install -y'                       # install apt package
 alias aptui='sudo apt upgrade -y'                      # upgrade apt packages
 alias aptrm='sudo apt remove -y'                       # remove apt package
 alias aptautorm='sudo apt autoremove -y'               # remove apt package with dependencies
-#-----------
+#----------------------------------------------------------------------------------------------------------------------------------------------------
 alias ipr='ip route'                                   # show routes
 alias ipa='ip addr'                                    # show addresses
 alias ipl='ip link'                                    # show links
@@ -46,9 +43,8 @@ alias sctlst='systemctl status'                        # service status
 alias sctlp='systemctl stop'                           # service stop
 alias H='Hyprland'                                     # start Hyprland
 alias sx='startx'                                      # startx - start xorg
-#-----------
-
-#--- git ---
+#----------------------------------------------------------------------------------------------------------------------------------------------------
+#--- git --------------------------------------------------------------------------------------------------------------------------------------------
 alias g='git'                                          # git
 alias ga='git add'                                     # add unstaged changes
 alias gaa='git add --all'                              # add all unstaged changes
@@ -77,9 +73,8 @@ alias grrm='git remote remove'                         # remove remote repositor
 alias gstall='git stash --all'                         # stash all in repository
 alias gstc='git stash clear'                           # clear git stash
 alias gst='git status'                                 # status repository
-#-----------
-
-#--- docker ---
+#----------------------------------------------------------------------------------------------------------------------------------------------------
+#--- docker -----------------------------------------------------------------------------------------------------------------------------------------
 alias dpa='docker ps -a'                               # list all docker containers
 alias dp='docker ps'                                   # list active docker containers
 alias dia='docker images -a'                           # list all docker images
@@ -91,13 +86,11 @@ alias ds='docker start'                                # start docker container
 alias dst='docker stop'                                # stop docker container
 alias dspa='docker system prune -a'                    # delete all docker data
 alias dcaq='docker ps -aq'                             # stop all containers
-#--------------
-
-#--- bluetooth ---
+#----------------------------------------------------------------------------------------------------------------------------------------------------
+#--- bluetooth --------------------------------------------------------------------------------------------------------------------------------------
 alias bctl="bluetoothctl"                              # bluetoothctl
 alias bctlc="bluetoothctl connect"                     # connect bluetooth device
 alias bctld="bluetoothctl disconnect"                  # disconnect bluetooth device
 alias bctll="bluetoothctl devices"                     # show bluetooth devices
 alias bctls="bluetoothctl scan on"                     # scan bluetooth devices
-#-----------------
-
+#----------------------------------------------------------------------------------------------------------------------------------------------------

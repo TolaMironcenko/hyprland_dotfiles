@@ -1,9 +1,7 @@
 #!/bin/sh
-
-#--- reset colors ---
+#--- reset colors ---------------
 RESET="\033[0m"
-#--------------------
-
+#--------------------------------
 #--------- regularcolrs ---------
 GREEN="\033[0;32m"       #GREEN
 BLUE="\033[0;34m"        #BLUE
@@ -14,7 +12,6 @@ PURPLE="\033[0;35m"      #PURPLE
 CYAN="\033[0;36m"        #CYAN
 WHITE="\033[0;37m"       #WHITE
 #--------------------------------
-
 #-------- bold ------------------
 BBLACK="\033[1;30m"      #BLACK
 BRED="\033[1;31m"        #RED
@@ -25,7 +22,6 @@ BPURPLE="\033[1;35m"     #PURPLE
 BCYAN="\033[1;36m"       #CYAN
 BWHITE="\033[1;37m"      #WHITE
 #--------------------------------
-
 #-------- Underline -------------
 UBLACK="\033[4;30m"      #BLACK
 URED="\033[4;31m"        #RED
@@ -36,7 +32,6 @@ UPURPLE="\033[4;35m"     #PURPLE
 UCYAN="\033[4;36m"       #CYAN
 UWHITE="\033[4;37m"      #WHITE
 #--------------------------------
-
 #--------- Background -----------
 ON_BLACK="\033[40m"      #BLACK
 ON_RED="\033[41m"        #RED
@@ -47,7 +42,6 @@ ON_PURPLE="\033[45m"     #PURPLE
 ON_CYAN="\033[46m"       #CYAN
 ON_WHITE="\033[47m"      #WHITE
 #--------------------------------
-
 #------ HighIntensity -----------
 IBLACK="\033[0;90m"      #BLACK
 IRED="\033[0;91m"        #RED
@@ -58,7 +52,6 @@ IPURPLE="\033[0;95m"     #PURPLE
 ICYAN="\033[0;96m"       #CYAN
 IWHITE="\033[0;97m"      #WHITE
 #--------------------------------
-
 #------ BoldHighIntensity -------
 BIBLACK="\033[1;90m"     #BLACK
 BIRED="\033[1;91m"       #RED
@@ -69,7 +62,6 @@ BIPURPLE="\033[1;95m"    #PURPLE
 BICYAN="\033[1;96m"      #CYAN
 BIWHITE="\033[1;97m"     #WHITE
 #--------------------------------
-
 #--- HighIntensitybackgrounds ---
 ON_IBLACK="\033[0;100m"  #BLACK
 ON_IRED="\033[0;101m"    #RED
