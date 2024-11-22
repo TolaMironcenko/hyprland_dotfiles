@@ -13,7 +13,7 @@ efi_part_size=500
 swap_size=8192
 hostname="arch"
 normal_user="tola"
-rootfstype="btrfs"
+rootfstype="ext4"
 answer=n
 # -------------------
 
